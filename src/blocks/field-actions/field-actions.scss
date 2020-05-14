@@ -1,0 +1,15 @@
+$line-height:                 1.375em !default;
+
+.field-actions {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  //margin-top: #{$line-height}em;
+  //margin-bottom: #{($line-height / 2)}em;
+
+  .btn {
+    width: 100%;
+    //margin-bottom: ($line-height / 2);
+  }
+}
