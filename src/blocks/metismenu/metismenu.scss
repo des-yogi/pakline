@@ -1,0 +1,232 @@
+$background-color:    #fff !default;
+$title-color:         #090909 !default;
+$link-color--hover:   #3e671e !default;
+
+.topbar-nav {
+  display: none;
+  position: relative;
+  //width: 100%;
+  //margin-top: 15px;
+  //background: $background-color;
+
+  @media (min-width: $menu-desktop-width) {
+    display: block;
+    margin-left: 48px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    margin-left: 64px;
+  }
+}
+
+.topbar-nav ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: transparent;
+
+  li + li {
+    margin-top: 0;
+  }
+}
+
+.topbar-nav .metismenu {
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  display: flex;
+  //-webkit-box-orient: vertical;
+  //-webkit-box-direction: normal;
+  //-ms-flex-direction: column;
+  //flex-direction: column;
+}
+
+.topbar-nav .metismenu > li {
+  //-webkit-box-flex: 1;
+  //-ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  display: flex;
+  //-webkit-box-orient: vertical;
+  //-webkit-box-direction: normal;
+  //-ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  //border-bottom: 1px solid $border-color;
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.mm-active a {
+
+    &::after {
+    transform: translateY(-50%) rotate(-180deg);
+      //background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+    }
+  }
+}
+
+.topbar-nav .metismenu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 3px 5px 3px 5px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: right;
+  white-space: nowrap;
+  color: $white;
+  outline-width: 0;
+  transition: all .2s ease-out;
+  user-select: none;
+
+  @media (min-width: $screen-xl) {
+    //padding: 3px 18px 3px 18px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  &.has-arrow {
+    padding: 3px 18px 3px 5px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      content: "";
+      width: 6px;
+      height: 3.5px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 6px 3.5px;
+      background-position: center;
+      background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+      transform-origin: center;
+      transform: translateY(-50%);
+      transition: all .2s ease-out;
+      border: none;
+      //border-style: solid;
+      //border-width: 1px 0 0 1px;
+      //border-color: initial;
+    }
+  }
+}
+
+
+.topbar-nav .metismenu a:hover,
+.topbar-nav .metismenu a:focus,
+.topbar-nav .metismenu a:active {
+  color: $white;
+  text-decoration: none;
+  //background: $link-color--hover;
+
+  &::after {
+    transform: translateY(-50%);
+    background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+  }
+}
+
+
+@media (min-width: $menu-desktop-width) {
+
+  .topbar-nav .metismenu {
+    //-webkit-box-orient: horizontal;
+    //-webkit-box-direction: normal;
+    //-ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .topbar-nav .metismenu > li {
+    //-webkit-box-orient: vertical;
+    //-webkit-box-direction: normal;
+    //-ms-flex-direction: column;
+    flex-direction: column;
+    flex: 0 1 auto;
+    border-bottom: none;
+    //border-right: 2px solid $border-color;
+  }
+
+  .topbar-nav .metismenu > li > ul {
+    $offset: 15px; // padding-bottom
+    position: absolute;
+    top: 100%;
+    //top: calc(100% + #{$offset});
+    min-width: 100%;
+    z-index: 91;
+    padding-top: $offset;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li > ul {
+    height: auto !important;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li:hover > ul {
+    display: block;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li:hover > a.has-arrow::after {
+    //-webkit-transform: rotate(-135deg);
+    transform: translateY(-50%) rotate(-180deg);
+  }
+}
+
+
+.metismenu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__submenu {
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    overflow: hidden;
+
+    li {
+      background-color: $white;
+
+      &.active {
+
+        .metismenu__link {
+          color: $secondary-color !important;
+          pointer-events: none;
+        }
+      }
+    }
+
+    li:first-child {
+      position: relative;
+      padding-top: 8px;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $main-color;
+      }
+    }
+
+    li:last-child {
+      padding-bottom: 8px;
+    }
+
+    #{$block-name}__link {
+      padding: 8px 16px !important;
+      color: $text-color !important;
+      background-color: $white;
+
+      &:hover,
+      &:focus {
+        color: $secondary-color !important;
+      }
+    }
+  }
+}
