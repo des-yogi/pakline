@@ -1,0 +1,25 @@
+.service-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    flex: 1 1 auto;
+
+    &:last-child {
+      flex: 0 1 auto;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      width: 50%;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-basis: calc(100% / 3);
+    }
+  }
+
+}

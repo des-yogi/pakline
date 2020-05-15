@@ -24,13 +24,48 @@
               <p>Ваш браузер не поддерживает HTML5 видео</p>
             </video>
           </div>
+          <div class="container  container--full  hero__text">
+            <h1 class="hero__title">Pakline group<span class="hero__slogan">Логістика в динаміці</span></h1>
+
+            <div class="hero__btns-wrapper">
+              <a href="#" class="btn  btn__secondary  btn__secondary--info">Про компанію</a>
+              <a href="#" class="btn  btn__secondary">Стати клієнтом</a>
+              <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+            </div>
+          </div>
         </div>
 
         @@include('blocks/page-header/page-header.html')
 
       </div>
 
-      <main role="main">
+      <main id="main-content" role="main">
+
+        <section class="service-gallery">
+
+          <div class="service-gallery__col">
+            <a href="#" class="service-gallery-item">
+
+              <div class="embed-responsive  embed-responsive--16-10  service-gallery-item__img">
+                <picture>
+                  <source data-srcset="img/service-gallery-img-01.webp" type="image/webp">
+                  <img class="b-lazy" data-src="img/service-gallery-img-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="640" height="400">
+                </picture>
+              </div>
+
+              <div class="service-gallery-item__text">
+                <h5 class="service-gallery-item__title">Аутсорсинг логістичних послуг</h5>
+                <div class="service-gallery-item__hidden">
+                  <p class="service-gallery-item__descr">По всьому ланцюжку поставок ми дотримуємося ваших вимог</p>
+                  <span class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее">O</span>
+                </div>
+              </div>
+
+            </a>
+          </div>
+
+
+        </section>
 
         <div class="container">
 

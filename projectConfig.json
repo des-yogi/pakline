@@ -31,7 +31,10 @@
     "tabs": [],
     "to-top": [],
     "typo": [],
-    "hero": []
+    "hero": [],
+    "search-form": [],
+    "service-gallery": [],
+    "service-gallery-item": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

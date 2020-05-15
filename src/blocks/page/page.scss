@@ -278,6 +278,24 @@ a {
   );
 }
 
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px

@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  z-index: 5;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: transparent;
@@ -15,6 +16,8 @@
 
     &--new-bg {
       background-color: $white;
+      border-bottom-color: transparent;
+      box-shadow: 0 8px 12px rgba($black, 0.35);
 
       .logo {
 
@@ -40,6 +43,81 @@
           }
         }
       }
+
+      .icon-link {
+        color: $text-color;
+
+        &:hover,
+        &:focus {
+          color: $link-color--hover;
+        }
+      }
+
+      .dropdown-toggle--menu {
+        color: $text-color;
+
+        &::after {
+          background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
+        }
+
+        &:hover,
+        &:focus {
+          color: $link-color--hover;
+
+          &::after {
+            background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover);
+          }
+        }
+      }
+
+      .topbar-nav .metismenu {
+
+        li.active {
+
+          a {
+            color: $link-color--hover;
+
+            &::before {
+              background-color: $link-color--hover;
+            }
+
+            &.has-arrow {
+
+              &::after {
+                background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
+              }
+            }
+          }
+        }
+
+        a {
+          color: $text-color;
+
+          &:hover,
+          &:focus {
+            color: $link-color--hover;
+
+            &::before {
+              background-color: $link-color--hover;
+            }
+          }
+
+          &.has-arrow {
+
+            &::after {
+              background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
+            }
+
+            &:hover,
+            &:focus {
+
+              &::after {
+                background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -50,9 +128,61 @@
     max-height: 100vh;
   }
 
-  &__left {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left,
+  &__right {
     display: flex;
     flex-wrap: wrap;
     //align-items: center;
+  }
+
+  &__right {
+
+    .btn {
+      font-size: 13px;
+      margin-left: 24px;
+
+      @media (min-width: $screen-xl) {
+        font-size: 15px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__service-menu {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__user-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 24px;
+    }
+
+    & > * {
+      margin-left: 24px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }
