@@ -22,6 +22,7 @@
   background-color: $main-color;
   background-image: none;
   cursor: pointer;
+  transition: all 0.2s ease-out;
 
   &:hover,
   &:focus {
@@ -58,6 +59,33 @@
     background-position: center;
     background-size: 7px 12px;
     background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$white);
+  }
+
+  &--icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7px 12px;
+    background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
+    transform: rotate(90deg);
+    border-width: 2px;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: inherit;
+      background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+    }
+
+    &[aria-expanded=true] {
+      transform: rotate(-90deg);
+      background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+    }
   }
 
   &__secondary {
@@ -119,6 +147,36 @@
         &:hover,
         &:focus {
           background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+        }
+      }
+    }
+
+    &--mini {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background-position: center;
+      border-width: 0;
+      border-radius: 50%;
+
+      @media (min-width: $screen-lg) {
+        width: auto;
+        max-width: 250px;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: $field-padding-horizontal;
+        padding-right: 60px;
+        background-position: right 14px center;
+        border-width: initial;
+        border-radius: $border-radius;
+      }
+
+      span {
+        display: none;
+
+        @media (min-width: $screen-lg) {
+          display: block;
         }
       }
     }

@@ -1,0 +1,99 @@
+.review-card {
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__logo {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 200px;
+    max-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    padding-right: 16px;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      padding-right: 24px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 48px;
+    }
+
+    q {
+      display: inline-block;
+      vertical-align: top;
+      quotes: none;
+
+      &::before,
+      &::after {
+        display: inline-block;
+        vertical-align: baseline;
+        content: "";
+        width: 10px;
+        height: 7px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10px 7px;
+        background: svg-load('../blocks/sprite-svg/svg/quotes-start.svg', fill=$main-color);
+      }
+
+      &::before {
+        margin-right: 0.5em;
+      }
+
+      &::after {
+        margin-left: 0.5em;
+        vertical-align: text-top;
+        transform: scale(-1,-1);
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 600;
+    font-size: inherit;
+    color: $text-color;
+
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+    }
+
+    &::before {
+      display: inline-block;
+      vertical-align: text-bottom;
+      content: "";
+      width: 22px;
+      height: 28px;
+      margin-right: 20px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 28px;
+      background: svg-load('../blocks/sprite-svg/svg/pdf-file.svg', fill=$main-color);
+    }
+  }
+}

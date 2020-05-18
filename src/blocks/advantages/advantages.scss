@@ -1,0 +1,138 @@
+.advantages {
+  color: $white;
+  background-color: $icon-color;
+
+  @media (min-width: $screen-md) {
+    background: linear-gradient(to right, $main-color, $main-color 50%, $icon-color 50%);
+  }
+
+  @media (min-width: $screen-xxl) {
+    background: linear-gradient(to right, $main-color, $main-color calc(50% - 24px), $icon-color calc(50% - 24px));
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xxl, 6, $grid-columns, 48px);
+
+    &:first-child {
+      background-color: $main-color;
+
+      @media (min-width: $screen-md) {
+        background: none;
+      }
+    }
+  }
+
+  &__care,
+  &__statistics {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__care {
+    height: 100%;
+
+    @media (min-width: $screen-md) {
+      padding-right: 12px;
+      background-color: $main-color;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 24px;
+    }
+
+    .btn {
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        max-width: 290px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: inherit;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+  }
+
+  &__statistics {
+
+    @media (min-width: $screen-md) {
+      padding-left: 12px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-sm) {
+      width: calc(50% - 12px);
+      //outline: 1px solid white;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: calc( 100% / 3 - 16px);
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: calc( 100% / 3 - 32px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(-n+2) {
+
+      @media (min-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    .h4 {
+      display: block;
+      margin-top: 0;
+      color: $main-color;
+      white-space: nowrap;
+
+      @media (min-width: $screen-xxl) {
+        //font-size: 36px; не влазит - проблема с сеткой
+      }
+    }
+  }
+}

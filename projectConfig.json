@@ -34,7 +34,12 @@
     "hero": [],
     "search-form": [],
     "service-gallery": [],
-    "service-gallery-item": []
+    "service-gallery-item": [],
+    "advantages": [],
+    "reviews": [],
+    "socials": [],
+    "copyrights": [],
+    "review-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

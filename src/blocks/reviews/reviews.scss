@@ -1,0 +1,81 @@
+.reviews {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  overflow-x: hidden;
+
+  @media (min-width: $screen-md) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+
+    @media (min-width: $screen-md) {
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+
+      @media (min-width: $screen-md) {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: -15px;
+        right: -15px;
+        height: 1px;
+        background-color: $border-color;
+        //background-color: red;
+      }
+
+      @media (min-width: $screen-lg) {
+        left: -36px;
+        right: -36px;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: -1000px;
+        right: -1000px;
+      }
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xxl, 4, $grid-columns, 48px);
+    border-top: 1px solid $border-color;
+
+    &:nth-child(3n+3) {
+
+      @media (min-width: $screen-lg) {
+
+        .review-card {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
