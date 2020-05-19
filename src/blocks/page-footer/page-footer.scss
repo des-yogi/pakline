@@ -17,7 +17,7 @@
     }
 
     @media (min-width: $screen-xxl) {
-      font-size: inherit;
+      font-size: 15px;
     }
   }
 
@@ -25,6 +25,7 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 12);
     @include col(lg, 2);
+    @include col(xxl, 2, $grid-columns, 48px);
     margin-bottom: 24px;
 
     @media (min-width: $screen-md) {
@@ -36,6 +37,7 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 4);
     @include col(lg, 2);
+    @include col(xxl, 2, $grid-columns, 48px);
     margin-bottom: 24px;
 
     @media (min-width: $screen-md) {
@@ -47,6 +49,7 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 4);
     @include col(lg, 2);
+    @include col(xxl, 2, $grid-columns, 48px);
     margin-bottom: 24px;
 
     @media (min-width: $screen-md) {
@@ -58,6 +61,7 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 4);
     @include col(lg, 2);
+    @include col(xxl, 2, $grid-columns, 48px);
     margin-bottom: 24px;
 
     @media (min-width: $screen-md) {
@@ -69,6 +73,7 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 12);
     @include col(lg, 4);
+    @include col(xxl, 4, $grid-columns, 48px);
   }
 
   &__address {
@@ -136,7 +141,7 @@
 
       @media (min-width: $screen-xxl) {
         max-width: 235px;
-        margin-bottom: 0;
+        //margin-bottom: 0;
       }
     }
   }
