@@ -2253,6 +2253,7 @@ ul {
     max-height: 80px;
     margin-bottom: 16px; }
 .review-card__text {
+    max-width: 100%;
     padding-right: 16px;
     margin-bottom: 24px; }
 .review-card__text q {
