@@ -26,10 +26,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
   var navbar = document.getElementById("page-header");
   var sticky = navbar.offsetTop;
-  var offset = 250;
+  var offset = 75;
 
   function stickyHandler() {
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset > (sticky + 0.1) ) {
       navbar.classList.add("sticky");
 
       if (window.pageYOffset >= (sticky + offset) ) {
@@ -42,3 +42,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     }
   }
 }());
+
+(function(){
+  var bLazy = new Blazy({
+    selector: '.b-lazy'
+  });
+}());
+

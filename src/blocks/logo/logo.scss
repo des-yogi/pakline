@@ -43,4 +43,54 @@
       }
     }
   }
+
+  &--mob-menu {
+
+    svg {
+
+      #icon {
+        fill: $main-color;
+      }
+
+      #text {
+
+        @media (min-width: $screen-md) {
+          fill: $text-color;
+        }
+      }
+    }
+  }
+
+  &--footer {
+    width: 110px;
+    height: 33px;
+
+    @media (min-width: $screen-lg) {
+      width: 140px;
+      height: 42px;
+    }
+
+    svg {
+
+      #icon {
+        fill: $main-color;
+      }
+
+      #text {
+        display: block;
+        transition: all 0.2s ease-out;
+      }
+    }
+
+    &:hover,
+    &:focus {
+
+      svg {
+
+        #text {
+          fill: $main-color;
+        }
+      }
+    }
+  }
 }

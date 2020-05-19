@@ -1,0 +1,88 @@
+.search-form {
+  padding: 16px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+
+    .field-text {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+  }
+
+  &__form {
+  }
+
+  &__result-wrapper {
+    margin-top: 24px;
+    text-align: center;
+
+    table {
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse;
+
+      td {
+        width: auto;
+
+        &:first-child {
+          width: 80px;
+        }
+
+        &:last-child {
+          display: inline-flex;
+          align-items: center;
+          font-weight: 600;
+          color: $main-color;
+
+          .loader {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  &__call {
+    margin-top: 24px;
+
+    p {
+      margin-bottom: 16px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__call-link {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 44px;
+    //margin-top: 0.5em;
+    color: $text-color;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    background-image: svg-load('../blocks/search-form/bg-img/phone.svg', fill=$main-color);
+  }
+
+  &--mob-menu {
+    padding: 0;
+    margin-bottom: 24px;
+
+    #{$block-name}__input-wrapper {
+      width: auto;
+
+      .btn {
+        margin-left: 24px;
+      }
+    }
+  }
+}

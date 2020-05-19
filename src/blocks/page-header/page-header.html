@@ -7,7 +7,7 @@
 -->
 
 <header id="page-header" class="page-header" role="banner">
-  <div  class="container  container--full">
+  <div  class="container  container--full  page-header__inner">
 
     <div class="page-header__left">
 
@@ -18,7 +18,7 @@
       <nav id="main-nav" class="main-nav  topbar-nav  is-hoverable" role="navigation">
         <ul id="metismenu" class="metismenu">
 
-          <li class="metismenu__item">
+          <li class="metismenu__item  active">
            <a class="has-arrow  metismenu__link" href="#" aria-expanded="false"><span>О компанії</span></a>
            <ul class="mm-collapse  metismenu__submenu">
              <li class="active"><a href="#" class="metismenu__link">Пункт 1</a></li>
@@ -30,9 +30,9 @@
          <li class="metismenu__item">
            <a class="has-arrow  metismenu__link" href="#" aria-expanded="false"><span>Логістичні рішення</span></a>
            <ul class="mm-collapse  metismenu__submenu">
-             <li><a href="service-page.html" class="metismenu__link">Услуга 1</a></li>
-             <li><a href="service-page.html" class="metismenu__link">Услуга 2</a></li>
-             <li><a href="service-page.html" class="metismenu__link">Услуга 3</a></li>
+             <li><a href="service-page.html" class="metismenu__link">Аутсорсинг логістичних послуг</a></li>
+             <li><a href="service-page.html" class="metismenu__link">Комплектація замовлень. Фулфілмент</a></li>
+             <li><a href="service-page.html" class="metismenu__link">Транспортні послуги</a></li>
            </ul>
          </li>
 
@@ -53,7 +53,87 @@
 
     </div>
 
-    <div class="page-header__right"></div>
+    <div class="page-header__right">
+
+      <div class="page-header__service-menu">
+
+        <div class="dropdown  dropdown--menu">
+          <button class="dropdown-toggle  dropdown-toggle--menu" type="button" id="orderSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Відстежити замовлення
+          </button>
+          <div class="dropdown-menu  search-form" aria-labelledby="orderSearch">
+            <p class="search-form__caption">Відстежити замовлення</p>
+
+            <form id="search-form" class="search-form__form" action="#" method="post">
+              <div class="search-form__input-wrapper">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Номер накладної">
+                  </span>
+                </label>
+                <input class="btn  btn--submit" type="submit" name="submitForm" value="">
+              </div>
+            </form>
+
+            <div class="search-form__result-wrapper">
+              <table>
+                <tr>
+                  <td>Статус:</td>
+                  <td>
+                    <span id="search-data">Нет данных</span>
+                    <span id="search-loader" class="loader"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="search-form__call">
+              <p>Виникли питання? Телефонуйте!</p>
+              <a href="tel:+0800303006" class="search-form__call-link">0800303006</a>
+            </div>
+
+          </div>
+        </div>
+
+        <a href="#" class="btn">Стати клієнтом</a>
+
+      </div>
+
+      <div class="page-header__user-menu">
+
+        <a href="#" class="page-header__user-link  icon-link" title="Кабинет пользователя">
+          <svg width="27" height="27">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+          </svg>
+        </a>
+
+        <div class="lang-switcher  dropdown" id="lang-switcher">
+          <button class="dropdown-toggle  icon-link" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Переключатель языка">
+            <svg width="27" height="27">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"></use>
+            </svg>
+          </button>
+          <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="lang-switcher">
+            <ul class="list-nostyled  lang-switcher__list">
+              <li class="lang-switcher__list-item">
+                <a class="dropdown-item" href="#">Рус</a>
+              </li>
+              <li class="lang-switcher__list-item  active">
+                <a class="dropdown-item" href="#">Укр</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="burger icon-link" type="button" data-drawer-trigger="" aria-controls="drawer-menu" aria-expanded="false" title="Переключатель мобильного меню">
+          <svg width="27" height="22">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"></use>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
 
   </div>
 </header>

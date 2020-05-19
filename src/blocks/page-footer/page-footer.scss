@@ -1,8 +1,143 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  color: $white;
+  background-color: $icon-color;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__top {
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 48px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      font-size: inherit;
+    }
+  }
+
+  &__col-logo {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 2);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__col-address {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 4);
+    @include col(lg, 2);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__col-email {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 4);
+    @include col(lg, 2);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__col-tel {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 4);
+    @include col(lg, 2);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__col-social {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 4);
+  }
+
+  &__address {
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &__email-list {
+
+  }
+
+  &__email-item {
+
+    & + & {
+      margin-top: 0.5em;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: baseline;
+    color: inherit;
+  }
+
+  &__social {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .btn {
+      width: 100%;
+      margin-bottom: 24px;
+
+      @media (min-width: $screen-xs) and (orientation: landscape) {
+        max-width: 220px;
+      }
+
+      @media (min-width: $screen-md) {
+        max-width: 225px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        max-width: 235px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }

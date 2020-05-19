@@ -3,6 +3,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  .dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+
   &.is-active {
     display: block;
   }
@@ -19,14 +23,14 @@
   }
 
   &__header {
-    padding: 20px 15px;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $border-color;
 
     @media (min-width: $screen-md) {
-      padding: 25px 40px;
+      padding: 15px 24px;
     }
   }
 
@@ -40,7 +44,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 22px 22px;
-    //background-image: url("data:image/svg+xml,%0A%3Csvg width='15px' height='16px' viewBox='0 0 15 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='2.-Menu' transform='translate(-15.000000, -13.000000)' stroke='%23000000'%3E%3Cg id='Group' transform='translate(15.000000, 13.521000)'%3E%3Cpath d='M0,0.479000129 L15,14.2971819' id='Path-3'%3E%3C/path%3E%3Cpath d='M0,14.7761821 L15,-1.24344979e-14' id='Path-3'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-image: svg-load('../blocks/drawer/bg-img/close-icon.svg', fill=$text-color);
     cursor: pointer;
 
@@ -57,7 +60,7 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    max-width: 425px;
+    max-width: 480px;
     z-index: 9999;
     overflow: auto;
     transition: transform 0.3s;
@@ -81,7 +84,12 @@
     overflow-y: auto;
     height: 100%;
     flex-grow: 1;
-    padding: 0 0 40px;
+    padding: 32px 15px 32px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 
   &__overlay {
@@ -99,36 +107,7 @@
     user-select: none;
   }
 
-  &--filter {
-
-    .filters-block {
-      border: none;
-    }
-
-    .filters-block__form {
-      position: relative;
-    }
-
-    .filters-block__form-action {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      padding-top: 0;
-      border-bottom: none;
-      background-color: $white;
-
-      @media (min-width: $screen-md) {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-    }
-
-    .filters-block__fieldset-wrapper {
-
-      @media (min-width: $screen-md) {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-    }
+  &__client-btn {
+    width: 100%;
   }
 }

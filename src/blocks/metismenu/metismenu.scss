@@ -11,7 +11,7 @@ $link-color--hover:   #3e671e !default;
 
   @media (min-width: $menu-desktop-width) {
     display: block;
-    margin-left: 48px;
+    margin-left: 42px;
   }
 
   @media (min-width: $screen-xxl) {
@@ -67,6 +67,26 @@ $link-color--hover:   #3e671e !default;
       //background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
     }
   }
+
+  &.active a {
+    pointer-events: none;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $white;
+    }
+  }
+
+  &.active > ul > li:not(.active) a {
+    pointer-events: auto;
+  }
 }
 
 .topbar-nav .metismenu a {
@@ -87,8 +107,12 @@ $link-color--hover:   #3e671e !default;
 
   @media (min-width: $screen-xl) {
     //padding: 3px 18px 3px 18px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: 16px;
   }
 
   &.has-arrow {
@@ -114,6 +138,14 @@ $link-color--hover:   #3e671e !default;
       //border-width: 1px 0 0 1px;
       //border-color: initial;
     }
+
+    &:hover,
+    &:focus {
+
+      &::before {
+        background-color: $main-color;
+      }
+    }
   }
 }
 
@@ -128,6 +160,18 @@ $link-color--hover:   #3e671e !default;
   &::after {
     transform: translateY(-50%);
     background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $white;
   }
 }
 
@@ -152,13 +196,11 @@ $link-color--hover:   #3e671e !default;
   }
 
   .topbar-nav .metismenu > li > ul {
-    $offset: 15px; // padding-bottom
     position: absolute;
     top: 100%;
-    //top: calc(100% + #{$offset});
     min-width: 100%;
     z-index: 91;
-    padding-top: $offset;
+    padding-top: 16px;
   }
 
   .topbar-nav.is-hoverable .metismenu > li > ul {
@@ -197,22 +239,22 @@ $link-color--hover:   #3e671e !default;
       }
     }
 
-    li:first-child {
-      position: relative;
-      padding-top: 8px;
+    // li:first-child {
+    //   position: relative;
+    //   padding-top: 8px;
 
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background-color: $main-color;
-      }
-    }
+    //   &::before {
+    //     display: block;
+    //     content: "";
+    //     position: absolute;
+    //     z-index: 1;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 4px;
+    //     background-color: $main-color;
+    //   }
+    // }
 
     li:last-child {
       padding-bottom: 8px;
