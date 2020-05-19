@@ -14,14 +14,14 @@
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 8);
     @include col(lg, 10);
-    @include col(xxl, 10, $grid-columns, 48px);
+    @include col(xxl, 9, $grid-columns, 48px);
   }
 
   &__right {
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 4);
     @include col(lg, 2);
-    @include col(xxl, 2, $grid-columns, 48px);
+    @include col(xxl, 3, $grid-columns, 48px);
 
     @media (min-width: $screen-md) {
       text-align: right;
