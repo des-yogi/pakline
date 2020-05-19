@@ -389,6 +389,8 @@ a.btn__secondary--disabled {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
+.drawer__client-btn {
+    width: 100%; }
 .dropdown--menu .dropdown-menu {
   top: 18px !important;
   border-top-left-radius: 0;
@@ -1915,11 +1917,12 @@ ul {
   z-index: 0;
   width: 100%;
   height: 100%; }
-.hero__video {
+.hero__media {
     height: 100%;
     width: 100%;
-    overflow: hidden; }
-.hero__video::before {
+    overflow: hidden;
+    background-color: #131c22; }
+.hero__media::before {
       display: block;
       content: "";
       position: absolute;
@@ -1930,7 +1933,8 @@ ul {
       background-size: cover;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 66, 119, 0.45)), to(rgba(19, 28, 33, 0))), -webkit-gradient(linear, left bottom, left top, from(rgba(2, 19, 33, 0.45)), to(rgba(15, 56, 89, 0))), rgba(19, 28, 33, 0.45);
       background: linear-gradient(180deg, rgba(0, 66, 119, 0.45) 0%, rgba(19, 28, 33, 0) 100%), linear-gradient(0deg, rgba(2, 19, 33, 0.45) 0%, rgba(15, 56, 89, 0) 100%), rgba(19, 28, 33, 0.45); }
-.hero__video video {
+.hero__media video,
+    .hero__media img {
       display: block;
       width: 100%;
       min-height: 100%;
@@ -2027,7 +2031,12 @@ ul {
     background-size: 20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='%231870b7'%3E%3Cpath d='M13.33,14.21l1.73-1.72A1.61,1.61,0,0,1,15.9,12a1.66,1.66,0,0,1,1,.08L19,13a1.68,1.68,0,0,1,.76.61,1.63,1.63,0,0,1,.29.93v3.84a1.66,1.66,0,0,1-.14.66,1.62,1.62,0,0,1-.95.9,1.66,1.66,0,0,1-.66.1C3.54,19.08.57,6.62,0,1.85a1.61,1.61,0,0,1,.07-.69A1.62,1.62,0,0,1,.43.55,1.88,1.88,0,0,1,1,.14,1.81,1.81,0,0,1,1.68,0H5.39a1.63,1.63,0,0,1,.93.29,1.57,1.57,0,0,1,.61.76l.84,2.1a1.71,1.71,0,0,1,.09.95A1.76,1.76,0,0,1,7.41,5L5.68,6.67S6.68,13.38,13.33,14.21Z' transform='translate(0 0)'/%3E%3C/svg%3E"); }
 .search-form--mob-menu {
-    padding: 0; }
+    padding: 0;
+    margin-bottom: 24px; }
+.search-form--mob-menu .search-form__input-wrapper {
+      width: auto; }
+.search-form--mob-menu .search-form__input-wrapper .btn {
+        margin-left: 24px; }
 .service-gallery {
   display: -webkit-box;
   display: -ms-flexbox;

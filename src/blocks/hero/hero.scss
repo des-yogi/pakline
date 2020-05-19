@@ -6,10 +6,11 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__video {
+  &__media {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background-color: $icon-color;
 
     &::before {
       display: block;
@@ -25,7 +26,8 @@
         linear-gradient(0deg, rgba(2, 19, 33, 0.45) 0%, rgba(15, 56, 89, 0) 100%), rgba(19, 28, 33, 0.45);
     }
 
-    video {
+    video,
+    img {
       display: block;
       width: 100%;
       min-height: 100%;

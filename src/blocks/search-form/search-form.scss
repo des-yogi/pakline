@@ -75,5 +75,14 @@
 
   &--mob-menu {
     padding: 0;
+    margin-bottom: 24px;
+
+    #{$block-name}__input-wrapper {
+      width: auto;
+
+      .btn {
+        margin-left: 24px;
+      }
+    }
   }
 }
