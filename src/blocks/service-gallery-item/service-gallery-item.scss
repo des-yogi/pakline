@@ -77,6 +77,10 @@
     }
   }
 
+  .date-time + #{$block-name}__title {
+    margin-top: 0.5em;
+  }
+
   &__descr {
     margin-top: 0;
     margin-bottom: auto;

@@ -131,6 +131,16 @@
       }
     }
 
+    &--download {
+      background-size: 19px 22px;
+      background-image: svg-load('../blocks/btn/bg-img/download.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/btn/bg-img/download.svg', fill=$main-color);
+      }
+    }
+
     &--next {
       display: none;
 

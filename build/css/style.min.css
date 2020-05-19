@@ -246,6 +246,11 @@ a.btn__secondary--disabled {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='white'%3E%3Cpath d='M16,0A16,16,0,1,0,32,16,16,16,0,0,0,16,0Zm0,29A13,13,0,1,1,29,16,13,13,0,0,1,16,29Z'/%3E%3Ccircle cx='16' cy='8' r='2'/%3E%3Crect x='14.5' y='13' width='3' height='12' rx='1' ry='1'/%3E%3C/svg%3E"); }
 .btn__secondary--info:hover, .btn__secondary--info:focus {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='%231870b7'%3E%3Cpath d='M16,0A16,16,0,1,0,32,16,16,16,0,0,0,16,0Zm0,29A13,13,0,1,1,29,16,13,13,0,0,1,16,29Z'/%3E%3Ccircle cx='16' cy='8' r='2'/%3E%3Crect x='14.5' y='13' width='3' height='12' rx='1' ry='1'/%3E%3C/svg%3E"); }
+.btn__secondary--download {
+      background-size: 19px 22px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='22' viewBox='0 0 19 22' fill='white'%3E%3Cpath d='M17.64,19.29H1.36a1.36,1.36,0,1,0,0,2.71H17.64a1.36,1.36,0,1,0,0-2.71Z'/%3E%3Cpath d='M8.54,15.89a1.35,1.35,0,0,0,1.92,0l4.07-4.07A1.36,1.36,0,1,0,12.61,9.9l-1.75,1.75V1.36a1.36,1.36,0,1,0-2.72,0V11.65L6.39,9.9a1.36,1.36,0,1,0-1.92,1.92Z'/%3E%3C/svg%3E"); }
+.btn__secondary--download:hover, .btn__secondary--download:focus {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='22' viewBox='0 0 19 22' fill='%231870b7'%3E%3Cpath d='M17.64,19.29H1.36a1.36,1.36,0,1,0,0,2.71H17.64a1.36,1.36,0,1,0,0-2.71Z'/%3E%3Cpath d='M8.54,15.89a1.35,1.35,0,0,0,1.92,0l4.07-4.07A1.36,1.36,0,1,0,12.61,9.9l-1.75,1.75V1.36a1.36,1.36,0,1,0-2.72,0V11.65L6.39,9.9a1.36,1.36,0,1,0-1.92,1.92Z'/%3E%3C/svg%3E"); }
 .btn__secondary--next {
       display: none; }
 .btn__secondary--mini {
@@ -1346,6 +1351,11 @@ a[href^="tel:"] {
     color: #020406; }
 .icon-link--mob-menu:hover, .icon-link--mob-menu:focus {
       color: #1870b7; }
+.date-time {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: currentColor; }
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
@@ -1936,7 +1946,8 @@ ul {
 .hero__media video,
     .hero__media img {
       display: block;
-      width: 100%;
+      min-width: 100%;
+      height: 100%;
       min-height: 100%;
       -o-object-fit: cover;
          font-family: "object-fit:cover;object-position:center";
@@ -1951,23 +1962,31 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    padding-top: calc(75px + 64px);
+    padding-top: calc(75px + 24px);
     padding-bottom: 24px;
     color: white; }
+.hero__text--noindex {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
 .hero__title {
+    margin-top: 0;
+    margin-bottom: 24px;
     color: currentColor; }
 .hero__slogan {
     display: block;
     margin-top: 10px;
-    font-size: 22px; }
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3; }
 .hero__btns-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2115,6 +2134,8 @@ ul {
     margin-top: 0;
     font-size: 18px;
     color: inherit; }
+.service-gallery-item .date-time + .service-gallery-item__title {
+    margin-top: 0.5em; }
 .service-gallery-item__descr {
     margin-top: 0;
     margin-bottom: auto;
@@ -2299,8 +2320,6 @@ ul {
 @media (min-width: 0) and (orientation: landscape) {
       .page-footer__social .btn {
         max-width: 220px; }
-      .hero__title {
-        margin-bottom: 16px; }
       .hero__btns-wrapper {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -2406,6 +2425,8 @@ ul {
     .row {
       margin-left: -12px;
       margin-right: -12px; }
+    .date-time {
+      font-size: 18px; }
       .page-footer__top {
         font-size: 14px; }
       .page-footer__col-logo {
@@ -2484,9 +2505,6 @@ ul {
     h5 {
       font-size: 22px; }
       .hero__text {
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
         padding-bottom: 48px; }
       .hero__title {
         margin-bottom: 48px; }
@@ -2787,6 +2805,8 @@ ul {
     .container--full {
       padding-left: 48px;
       padding-right: 48px; }
+    .date-time {
+      font-size: 20px; }
       .page-header__right .btn {
         font-size: 15px; }
     .h1,
@@ -2903,7 +2923,7 @@ ul {
     h5 {
       font-size: 28px; }
       .hero__text {
-        padding-top: calc(82px + 64px); }
+        padding-top: calc(82px + 24px); }
     .advantages {
       background: linear-gradient(to right, #1870b7, #1870b7 calc(50% - 24px), #131c22 calc(50% - 24px)); }
       .advantages__col {
