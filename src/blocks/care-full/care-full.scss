@@ -1,9 +1,50 @@
-// В этом файле должны быть стили для БЭМ-блока care-full, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .care-full {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: $white;
+  background-color: $main-color;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(lg, 0);
+    @include col(lg, 8);
+    @include col(xxl, 8, $grid-columns, 48px);
+  }
+
+  &__col-logo {
+    display: none;
+    @include col-offset(lg, 2);
+    @include col(lg, 2);
+    @include col-offset(xxl, 2);
+    @include col(xxl, 2, $grid-columns, 48px);
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: inherit;
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+  }
 }

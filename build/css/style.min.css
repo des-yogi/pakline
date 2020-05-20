@@ -2317,6 +2317,29 @@ ul {
       background-position: center;
       background-size: 22px 28px;
       background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='28' viewBox='0 0 22 28' fill='%231870b7'%3E%3Cpath d='M5.87,17.75a2.19,2.19,0,0,0-.51.05v1.65a1.55,1.55,0,0,0,.41,0c.66,0,1.06-.34,1.06-.91S6.49,17.75,5.87,17.75Z'/%3E%3Cpath d='M10.66,17.77a2.29,2.29,0,0,0-.56.05v3.65a1.89,1.89,0,0,0,.43,0,1.72,1.72,0,0,0,1.86-2A1.59,1.59,0,0,0,10.66,17.77Z'/%3E%3Cpath d='M13.75,0h-11A2.68,2.68,0,0,0,.81.82,2.83,2.83,0,0,0,0,2.8V25.2a2.83,2.83,0,0,0,.81,2A2.68,2.68,0,0,0,2.75,28h16.5a2.68,2.68,0,0,0,1.94-.82,2.83,2.83,0,0,0,.81-2V8.4ZM7.56,19.87a2.55,2.55,0,0,1-1.78.58,2.07,2.07,0,0,1-.43,0v2H4.13V16.91A10.34,10.34,0,0,1,5.8,16.8a2.59,2.59,0,0,1,1.68.45,1.63,1.63,0,0,1,.58,1.29A1.84,1.84,0,0,1,7.56,19.87Zm5.23,1.89a3.85,3.85,0,0,1-2.53.72,10.82,10.82,0,0,1-1.4-.08V16.92a9.32,9.32,0,0,1,1.67-.12,3.47,3.47,0,0,1,2.25.6,2.47,2.47,0,0,1,.93,2.1A2.84,2.84,0,0,1,12.79,21.76Zm5.08-3.88h-2.1v1.27h2v1h-2v2.25H14.52V16.84h3.35ZM12.38,9.8v-7l6.87,7Z'/%3E%3C/svg%3E"); }
+.care-full {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: white;
+  background-color: #1870b7; }
+.care-full__col-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px; }
+.care-full__col-logo {
+    display: none; }
+.care-full__col-logo img {
+      display: block;
+      width: 100%; }
+.care-full__subtitle {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: inherit; }
+.care-full__descr {
+    margin-bottom: 32px; }
 @media (min-width: 0) and (orientation: landscape) {
       .page-footer__social .btn {
         max-width: 220px; }
@@ -2606,7 +2629,16 @@ ul {
       .review-card__text {
         padding-right: 24px; }
       .review-card__link {
-        margin-top: auto; } }
+        margin-top: auto; }
+      .care-full__col-text {
+        margin-left: 16.66667%; }
+      .care-full__col-text {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 66.66667%;
+                flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+        padding-left: 12px;
+        padding-right: 12px; } }
 @media (min-width: 992px) {
   .dropdown-menu-lg-left {
     right: auto;
@@ -2790,7 +2822,32 @@ ul {
                 flex: 0 0 16.66667%;
         max-width: 16.66667%;
         padding-left: 12px;
-        padding-right: 12px; } }
+        padding-right: 12px; }
+      .care-full__col-text {
+        margin-left: 0%; }
+      .care-full__col-text {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 66.66667%;
+                flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+        padding-left: 12px;
+        padding-right: 12px; }
+      .care-full__col-logo {
+        margin-left: 16.66667%; }
+      .care-full__col-logo {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 16.66667%;
+                flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        padding-left: 12px;
+        padding-right: 12px; }
+      .care-full__col-logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 @media (min-width: 1366px) {
     .dropdown--menu .dropdown-menu {
       top: 16px !important; }
@@ -2840,7 +2897,10 @@ ul {
       font-size: 24px; }
     .reviews__list::before, .reviews__list::after {
       left: -1000px;
-      right: -1000px; } }
+      right: -1000px; }
+    .care-full {
+      padding-top: 64px;
+      padding-bottom: 64px; } }
 @media (min-width: 1920px) {
     .dropdown--menu .dropdown-menu {
       top: 21px !important; }
@@ -2969,7 +3029,23 @@ ul {
       padding-top: 32px;
       padding-bottom: 32px; }
       .review-card__text {
-        padding-right: 48px; } }
+        padding-right: 48px; }
+      .care-full__col-text {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 66.66667%;
+                flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+        padding-left: 24px;
+        padding-right: 24px; }
+      .care-full__col-logo {
+        margin-left: 16.66667%; }
+      .care-full__col-logo {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 16.66667%;
+                flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        padding-left: 24px;
+        padding-right: 24px; } }
 @media (max-width: 767px) {
   .table-responsive {
     display: block;
