@@ -310,6 +310,21 @@ a {
   }
 }
 
+.date-time {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: currentColor;
+
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 20px;
+  }
+}
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px

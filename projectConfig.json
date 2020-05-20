@@ -39,7 +39,8 @@
     "reviews": [],
     "socials": [],
     "copyrights": [],
-    "review-card": []
+    "review-card": [],
+    "care-full": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
