@@ -1,5 +1,6 @@
 <!--DEV
 @ @include('blocks/breadcrumbs/breadcrumbs.html')
+-->
 
 <nav class="breadcrumbs">
   <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>
@@ -8,8 +9,8 @@
 
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="#" class="breadcrumbs__link">
-       <span itemprop="name">Главная</span>
+      <a itemprop="item" href="#" class="breadcrumbs__link" title="Главная">
+       <span class="visually-hidden" itemprop="name">Главная</span>
        <meta itemprop="position" content="1" />
       </a>
     </li>
@@ -32,5 +33,3 @@
 
   </ol>
 </nav>
--->
-

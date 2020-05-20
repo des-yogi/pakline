@@ -49,3 +49,28 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   });
 }());
 
+(function(){
+  var phoneElems = document.getElementsByClassName('phone-mask');
+  Array.prototype.forEach.call(phoneElems, function (item) {
+    var phoneMask = IMask(
+      item, {
+        mask: '+{38\\0} (00) 000 00 00',
+        lazy: false // make placeholder always visible
+    });
+  });
+}());
+
+(function () {
+  const submitBtn = document.querySelector('.btn-submit');
+  const agreementCheckbox = document.querySelector('#agreement');
+  const agreementHandler = function (e) {
+    if (!this.checked) {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }
+  };
+  if (agreementCheckbox) {
+    agreementCheckbox.addEventListener('change', agreementHandler);
+  }
+})();

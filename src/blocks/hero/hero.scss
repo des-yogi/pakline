@@ -40,8 +40,8 @@
   &__text {
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
     justify-content: flex-end;
+
     position: absolute;
     left: 0;
     right: 0;
@@ -56,15 +56,32 @@
     // }
 
     @media (min-width: $screen-md) {
+      padding-top: calc(75px + 30px);
       padding-bottom: 48px;
     }
 
     @media (min-width: $screen-xxl) {
-      padding-top: calc(82px + 24px);
+      padding-top: calc(82px + 32px);
     }
 
-    &--noindex {
-      justify-content: flex-end;
+    &--fixed {
+      justify-content: space-between;
+    }
+  }
+
+  &__text-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    #{$block-name}__title {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        margin-right: 48px;
+      }
     }
   }
 
@@ -145,6 +162,33 @@
       @media (min-width: $screen-md) {
         width: 48px;
         margin-left: auto;
+      }
+    }
+  }
+
+  &--fixed {
+    background-color: $main-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    //background-image: url(../img/half-hero-bg.jpg);
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 66, 119, 0.45) 0%, rgba(19, 28, 33, 0) 100%), linear-gradient(0deg, rgba(2, 19, 33, 0.45) 0%, rgba(15, 56, 89, 0) 100%), linear-gradient(0deg, rgba(19, 28, 33, 0.45), rgba(19, 28, 33, 0.45));
+    }
+
+    &--noimg {
+
+      &::after {
+        display: none;
       }
     }
   }

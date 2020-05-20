@@ -53,10 +53,10 @@ $border-radius:               3px !default;
     }
 
     &[required] {
-      padding-right: 35px;
+      padding-right: 32px;
       background-color: $white;
       background-repeat: no-repeat;
-      background-position: right 18px center;
+      background-position: right 12px top 16px;
       background-image: svg-load('../blocks/field-text/bg-img/asterisk-icon.svg', fill=$main-color);
       background-size: 7px;
     }

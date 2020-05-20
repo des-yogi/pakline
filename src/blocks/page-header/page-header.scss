@@ -127,6 +127,20 @@
     height: 100vh;
     //min-height: 560px;
     max-height: 100vh;
+
+    &--fixed {
+      min-height: 568px;
+      max-height: none;
+      height: auto;
+
+      @media (min-width: $screen-xs) and (orientation: landscape) {
+        min-height: 320px;
+      }
+
+      @media (min-width: $screen-md) and (orientation: landscape) {
+        min-height: 568px;
+      }
+    }
   }
 
   &__inner {

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакты</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper  page-header__wrapper--fixed">
+
+        <div class="b-lazy  hero  hero--fixed" data-src="img/half-hero-bg.jpg">
+          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->
+
+          <div class="container  container--full  hero__text  hero__text--fixed">
+
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <div class="hero__text-inner">
+              <h1 class="hero__title  hero__title--fixed">Контактна інформація
+                <!-- <span class="hero__slogan">Група компаній PAKLINE</span> -->
+              </h1>
+
+              <div class="hero__btns-wrapper  hero__btns-wrapper--fixed">
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        @@include('blocks/page-header/page-header.html')
+
+      </div>
+
+      <main id="main-content" role="main">
+
+        <div class="container  alert">
+          <div class="row">
+
+            <div class="alert__col-left">
+              <p class="h4 alert__caption">Уважаемые клиенты!</p>
+            </div>
+
+            <div class="alert__col-right">
+              <p>В связи с карантином, на весь период запрещается посещение отделений "Экспресс Мото Украина". Отправить или получить Отправление вы можете, заказав курьера по телефонам: 0 800 503 503, 093 177 02 26. Заказы в регионах принимаются по согласованию.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <section class="contacts">
+
+          <div class="contacts__left">
+            <div class="contacts__address">
+
+              <div class="contacts__address-item">
+                <h4 class="contacts__address-title">Адрес 1</h4>
+                <p><span>Україна</span>, <span>49000</span>, <span>м. Дніпро</span>, <span>вул. Січових Стрільців, 94</span></p>
+              </div>
+
+              <div class="contacts__address-item">
+                <h4 class="contacts__address-title">Адрес 2</h4>
+                <p><span>Україна</span>, <span>04209</span>, <span>м. Київ</span>, <span>вул. Кемеровська, 1</span></p>
+              </div>
+
+              <div class="contacts__address-item">
+                <h4 class="contacts__address-title">E-mail</h4>
+                <ul class="list-nostyled  contacts__list">
+                  <li class="contacts__list-item">
+                    <a href="mailto:info@pakline.com.ua" class="contacts__address-link">info@pakline.com.ua</a>
+                  </li>
+                  <li class="contacts__list-item">
+                    <a href="mailto:korsa@pakline.com.ua" class="contacts__address-link">korsa@pakline.com.ua</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contacts__address-item">
+                <h4 class="contacts__address-title">Телефони</h4>
+                <ul class="list-nostyled  contacts__list">
+                  <li class="contacts__list-item">
+                    <a href="tel:+0800303006" class="contacts__address-link">0800303006</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="contacts__right">
+            <div class="contacts__form-wrapper">
+              <h3 class="contacts__form-title">Зв'язок з експертом</h3>
+
+              <form id="contact-form" class="contacts__form" action="#" method="post">
+
+                <div class="contacts__form-section">
+                  <p class="contacts__form-subtitle">Заповніть форми</p>
+
+                  <div class="contacts__form-col">
+
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+                      </span>
+                    </label>
+
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" value="" placeholder="E-mail" required>
+                      </span>
+                    </label>
+
+                  </div>
+
+                  <div class="contacts__form-col">
+
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="company" value="" placeholder="Компанія">
+                      </span>
+                    </label>
+
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input  phone-mask" type="text" name="tel" value="">
+                      </span>
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <div class="contacts__form-section">
+                  <p class="contacts__form-subtitle">Виберіть вид логістичних послуг</p>
+
+                  <div class="contacts__form-col">
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Аутсорсинг логістичних послуг</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Комплектація замовлень. Фулфілмент</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Складські послуги</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Адресна доставка</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Кур'єрські послуги</span>
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="contacts__form-col">
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Транспортні послуги</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Холодна логістика</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Логістичний консалтинг</span>
+                      </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" name="" value="">
+                        <span class="field-checkbox__name-text">Технології</span>
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="contacts__form-section  contacts__form-section--messages">
+                  <p class="contacts__form-subtitle">Повідомлення</p>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                       <textarea class="field-text__input" name="message" value="" rows="4" required></textarea>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="contacts__form-section  contacts__form-section--action">
+
+                  <div class="field-checkbox  field-checkbox--action">
+                    <label class="field-checkbox__name">
+                      <input id="agreement" class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                      <span class="field-checkbox__name-text">Я согласен на обработку персональных данных</span>
+                    </label>
+                  </div>
+
+                  <div class="field-actions">
+                    <input class="btn  btn-submit" type="submit" name="submitContactForm" value="Надіслати">
+                  </div>
+
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </section>
+
+        <section class="map"></section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
