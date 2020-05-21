@@ -18,16 +18,18 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: calc(100% / 3 - 12px);
+      //width: calc(100% / 3 - 12px);
+      width: 33.33333%;
       padding-left: 48px;
-      padding-right: 0;
+      padding-right: 24px;
     }
 
     @media (min-width: $screen-xxl) {
-      width: 25%;
-      //$padding-min: 230px; // нужный отступ от краев экрана
-      //$half-screen-xxl: $screen-xxl / 2 - $padding-min;
-      //padding-left: calc(33% - #{$half-screen-xxl});
+      width: calc(100% / 3 + 48px);
+      $padding-min: 230px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      padding-left: calc(50% - #{$half-screen-xxl});
+      padding-right: 24px;
     }
   }
 
@@ -39,19 +41,18 @@
     }
 
     @media (min-width: $screen-lg) {
-      width: calc(100% / 3 * 2 - 12px);
-      padding-left: 0;
+      //width: calc(100% / 3 * 2 - 12px);
+      width: 66.66667%;
+      padding-left: 24px;
       padding-right: 48px;
     }
 
-    @media (min-width: $screen-xl) {
-
-    }
-
     @media (min-width: $screen-xxl) {
-      //$padding-min: 230px; // нужный отступ от краев экрана
-      //$half-screen-xxl: $screen-xxl / 2 - $padding-min;
-      //padding-right: calc(100% - #{$half-screen-xxl});
+      width: calc(100% / 3 * 2 - 48px);
+      $padding-min: 230px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      padding-right: calc(50% - #{$half-screen-xxl});
+      padding-left: 46px;
     }
   }
 
@@ -75,9 +76,9 @@
         display: block;
         content: "";
         position: absolute;
-        top: -1px;
-        bottom: -1px;
-        right: 0;
+        top: -0.1px;
+        bottom: -0.1px;
+        right: -24.5px;
         width: 24px;
         background-color: $white;
       }
@@ -166,7 +167,11 @@
   }
 
   &__form {
+    margin-bottom: 48px;
 
+    @media (min-width: $screen-lg) {
+      margin-bottom: 64px;
+    }
   }
 
   &__form-section {
@@ -227,5 +232,82 @@
       width: 100%;
       margin-bottom: 16px;
     }
+  }
+
+  &__phones-block {
+
+  }
+
+  &__phones-block-title {
+    margin-bottom: 16px;
+  }
+
+  &__phones-wrapper {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__phones-unit {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 12px);
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+  }
+
+  &__phones-logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 135px;
+    max-width: 135px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+
+    @media (min-width: $screen-xxl) {
+      width: 200px;
+      max-width: 200px;
+    }
+  }
+
+  &__phones-list {
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__phones-item {
+    color: $text-color;
+
+    & + & {
+      margin-top: 0.4em;
+
+      @media (min-width: $screen-xxl) {
+        margin-top: 0.2em;
+      }
+    }
+  }
+
+  &__phones-title {
+    font-weight: 600;
+  }
+
+  &__phones-link {
+    color: inherit;
   }
 }

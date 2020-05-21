@@ -3,7 +3,8 @@
   display: flex;
   align-items: flex-end;
   min-height: 300px;
-  margin-bottom: 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
 
   background-color: $main-color;
   background-size: cover;
@@ -12,14 +13,12 @@
   //background-image: url(../img/full-width-banner.jpg);
 
   @media (min-width: $screen-md) {
-    margin-bottom: 48px;
-  }
-
-  @media (min-width: $screen-lg) {
+    margin-top: 64px;
     margin-bottom: 64px;
   }
 
   @media (min-width: $screen-xl) {
+    margin-top: 92px;
     margin-bottom: 92px;
   }
 

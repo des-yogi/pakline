@@ -1,21 +1,20 @@
 .media-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
 
   @media (min-width: $screen-md) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 48px;
-  }
-
-  @media (min-width: $screen-lg) {
+    margin-top: 64px;
     margin-bottom: 64px;
   }
 
   @media (min-width: $screen-xl) {
+    margin-top: 92px;
     margin-bottom: 92px;
   }
 

@@ -14,18 +14,50 @@
 
     <div class="page__content">
 
-      <div class="page-header__wrapper  page-header__wrapper--fixed">
+      <div class="page-header__wrapper">
 
-        <div class="b-lazy  hero  hero--fixed" data-src="img/half-hero-bg.jpg">
-          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->
+        <div class="hero">
+
+          <div class="hero__media">
+            <!-- <video id="hero-movie" poster="img/hero-img.jpg" preload muted autoplay loop>
+              <source src="video/hero.mp4" type="video/mp4">
+              <source src="video/hero.webm" type="video/webm">
+              <p>Ваш браузер не поддерживает HTML5 видео</p>
+            </video> -->
+            <picture>
+              <source data-srcset="img/hero-img.webp" media="(min-width: 1280px)" type="image/webp">
+              <source data-srcset="img/hero-img.jpg" media="(min-width: 1280px)">
+              <!-- 1920x1200 -->
+              <source data-srcset="img/hero-img.webp" type="image/webp">
+              <img class="b-lazy" data-src="img/hero-img.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Заставка" width="1280" height="800">
+            </picture>
+          </div>
+
           <div class="container  container--full  hero__text  hero__text--fixed">
-            <h1 class="hero__title  hero__title--fixed">О компанії
-              <span class="hero__slogan">Група компаній PAKLINE</span>
-            </h1>
 
-            <div class="hero__btns-wrapper  hero__btns-wrapper--fixed">
-              <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <div class="hero__text-inner">
+
+              <div class="hero__text-inner-left">
+
+                <h1 class="hero__title">Логістичні рішення<span class="hero__slogan">Професійні логістичні послуги для вашого бізнесу</span></h1>
+
+                <!-- <div class="hero__text-inner-btn">
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                </div> -->
+
+              </div>
+
+              <div class="hero__text-inner-right">
+
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+
+              </div>
+
             </div>
+
           </div>
         </div>
 
@@ -62,20 +94,15 @@
 
           </div>
 
-        </div>
+          <span class="b-lazy  full-width-banner" data-src="img/full-width-banner.jpg">
+            <span class="container  h5  full-width-banner__content">Прозорість всього ланцюжку поставок від отримання замовлення до доставки отримувачу</span>
+          </span>
 
-        <span class="b-lazy  full-width-banner" data-src="img/full-width-banner.jpg">
-          <span class="container  h5  full-width-banner__content">Цінність бізнес-операцій кожного клієнта для нас – понад усе</span>
-        </span>
-
-        <div class="media-block">
+          <div class="media-block">
 
             <div class="media-block__col-text">
               <div class="media-block__text">
-                <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
-                <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
-                <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
-
+                <h2>PAKLINE GROUP</h2>
                 <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
                 <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
                 <p>PAKLINE GROUP – група компаній, що працюють у сфері логістики, яка включає в себе компанії ТОВ КОРСА, EXPRESS MOTO, KUB D24, KITEXPRESS и TM PAKLINE Logistics. Кожна з компаній, які входять в PAKLINE GROUP спеціалізуються на своїй ділянці управління ланцюгами поставок.</p>
@@ -85,11 +112,11 @@
             <div class="media-block__col-img">
               <div class="embed-responsive  embed-responsive--4-3  media-block__img">
                 <picture>
-                  <source data-srcset="img/img-4x3-02.webp" media="(min-width: 480px)" type="image/webp">
-                  <source data-srcset="img/img-4x3-02.jpg" media="(min-width: 480px)">
+                  <source data-srcset="img/img-4x3-01.webp" media="(min-width: 480px)" type="image/webp">
+                  <source data-srcset="img/img-4x3-01.jpg" media="(min-width: 480px)">
                   <!-- 600x375 -->
-                  <source data-srcset="img/img-4x3-02.webp" type="image/webp">
-                  <img class="b-lazy" data-src="img/img-4x3-02.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="300">
+                  <source data-srcset="img/img-4x3-01.webp" type="image/webp">
+                  <img class="b-lazy" data-src="img/img-4x3-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="300">
                 </picture>
               </div>
             </div>
@@ -98,8 +125,95 @@
 
         </div>
 
+        <span class="b-lazy  full-width-banner" data-src="img/full-width-banner.jpg">
+          <span class="container  h5  full-width-banner__content">Прозорість всього ланцюжку поставок від отримання замовлення до доставки отримувачу</span>
+        </span>
+
+        <section class="container  services-scroll">
+
+          <h2 class="visually-hidden">Здесь должен быть заголовок, говорящий о том, что тут перечислено!</h2>
+
+          <div class="services-scroll__content">
+
+            <h5>Велика Побутова Техніка</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+              <li>Управління поверненнями</li>
+            </ul>
+
+            <h5>Індустрія краси. Товари для В2В</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Сортування та комплектація. Фулфілмент</li>
+              <li>Адресна доставка</li>
+            </ul>
+
+            <h5>Фармацевтика та охорона здоров’я:</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+            </ul>
+
+            <h5>Велика Побутова Техніка</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+              <li>Управління поверненнями</li>
+            </ul>
+
+            <h5>Індустрія краси. Товари для В2В</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Сортування та комплектація. Фулфілмент</li>
+              <li>Адресна доставка</li>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+            </ul>
+
+            <h5>Фармацевтика та охорона здоров’я:</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+            </ul>
+
+            <h5>Фармацевтика та охорона здоров’я:</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+            </ul>
+
+            <h5>Велика Побутова Техніка</h5>
+            <ul>
+              <li>Дистрибуція</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+              <li>Управління поверненнями</li>
+              <li>Дистрибуція</li>
+              <li>Цілісність холодного ланцюгу</li>
+              <li>Відповідальне зберігання</li>
+              <li>Адресна доставка</li>
+            </ul>
+
+          </div>
+
+        </section>
+
         <section class="service-gallery">
-          <h2 class="visually-hidden">Тендеры (текущие, актуальные…)</h2>
+          <h2 class="visually-hidden">Наши услуги</h2>
 
           <div class="service-gallery__col">
             <div class="service-gallery-item" onclick="window.open('https://page.address/')">
@@ -118,11 +232,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Аутсорсинг логістичних послуг</h5>
-                </div>
-
+                <h5 class="service-gallery-item__title">Аутсорсинг логістичних послуг</h5>
+                <p class="service-gallery-item__descr">По всьому ланцюжку поставок ми дотримуємося ваших вимог</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -146,10 +257,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Комплектація замовлень. Фулфілмент</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Комплектація замовлень. Фулфілмент</h5>
+                <p class="service-gallery-item__descr">Наш досвід у напрямку фулфілменту один з найзначніших на логістичному ринку України</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -173,10 +282,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Транспортні послуги</h5>
+                <p class="service-gallery-item__descr">Еластичність нашої сервісної пропозиції як результат оптимального забеспечення транспортним ресурсом та впроводження новітніх технологій</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -200,10 +307,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Аутсорсинг логістичних послуг</h5>
+                <p class="service-gallery-item__descr">По всьому ланцюжку поставок ми дотримуємося ваших вимог</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -227,10 +332,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Комплектація замовлень. Фулфілмент</h5>
+                <p class="service-gallery-item__descr">Наш досвід у напрямку фулфілменту один з найзначніших на логістичному ринку України</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -254,10 +357,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Транспортні послуги</h5>
+                <p class="service-gallery-item__descr">Еластичність нашої сервісної пропозиції як результат оптимального забеспечення транспортним ресурсом та впроводження новітніх технологій</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -281,10 +382,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Аутсорсинг логістичних послуг</h5>
+                <p class="service-gallery-item__descr">По всьому ланцюжку поставок ми дотримуємося ваших вимог</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 
@@ -308,10 +407,8 @@
               </div>
 
               <div class="service-gallery-item__text">
-                <div class="service-gallery-item__title-wrapper">
-                  <span class="date-time">24.05.2020 | 18:00</span>
-                  <h5 class="service-gallery-item__title">Название тендера</h5>
-                </div>
+                <h5 class="service-gallery-item__title">Комплектація замовлень. Фулфілмент</h5>
+                <p class="service-gallery-item__descr">Наш досвід у напрямку фулфілменту один з найзначніших на логістичному ринку України</p>
                 <a href="#" class="btn  btn__secondary  btn__secondary--mini  service-gallery-item__link" title="Далее"><span>Дізнатися більше</span></a>
               </div>
 

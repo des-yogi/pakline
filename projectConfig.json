@@ -44,7 +44,11 @@
     "media-block": [],
     "full-width-banner": [],
     "alert": [],
-    "contacts": []
+    "contacts": [],
+    "map": [],
+    "services-scroll": [],
+    "text-page": [],
+    "field-file": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

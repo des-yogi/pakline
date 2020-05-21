@@ -1,0 +1,40 @@
+.services-scroll {
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 92px;
+    margin-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+
+    @media (min-width: $screen-md) {
+      columns: auto 2;
+      column-gap: 24px;
+      column-fill: balance-all;
+    }
+
+    @media (min-width: $screen-xxl) {
+      column-gap: 48px;
+    }
+
+    * {
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    li + li {
+      margin-top: 0.5em;
+    }
+  }
+}

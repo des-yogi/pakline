@@ -1,0 +1,44 @@
+.text-page {
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 92px;
+    margin-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  h2,
+  .h2 {
+    margin-bottom: 16px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  li + li {
+    margin-top: 0.5em;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(xxl, 2);
+    @include col(xxl, 8, $grid-columns, 48px);
+  }
+
+  &__block {
+
+    h4 {
+      margin-bottom: 16px;
+    }
+  }
+}

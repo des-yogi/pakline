@@ -83,15 +83,99 @@
         margin-right: 48px;
       }
     }
+
+    &--fullscreen {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      #{$block-name}__title {
+        width: 100%;
+        //margin-bottom: 24px;
+
+        @media (min-width: $screen-md) {
+          margin-right: 0;
+          //margin-bottom: 48px;
+        }
+
+        @media (min-width: $screen-xl) {
+          //margin-bottom: 64px;
+        }
+      }
+    }
+  }
+
+  &__text-inner-left {
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      flex: 1 1 auto;
+      margin-right: 24px;
+    }
+  }
+
+  &__text-inner-right {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__text-inner-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+
+    @media (min-width: $screen-xs) and (orientation: landscape) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 48px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 64px;
+    }
+
+    .btn + .btn {
+      margin-top: 24px;
+
+      @media (min-width: $screen-xs) and (orientation: landscape) {
+        margin-top: 0;
+        margin-left: 24px;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+        margin-left: 24px;
+      }
+    }
+
+    .btn {
+      max-width: 320px;
+
+      @media (min-width: $screen-xs) and (orientation: landscape) {
+        flex: 1 1 auto;
+      }
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+      }
+    }
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 24px;
     color: currentColor;
-
-    // @media (min-width: $screen-xs) and (orientation: landscape) {
-    // }
 
     @media (min-width: $screen-md) {
       margin-bottom: 48px;
@@ -162,6 +246,19 @@
       @media (min-width: $screen-md) {
         width: 48px;
         margin-left: auto;
+      }
+    }
+
+    &--fullscreen {
+      width: 100%;
+      margin-top: 24px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 48px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 64px;
       }
     }
   }

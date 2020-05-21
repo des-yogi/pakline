@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Тендер</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper  page-header__wrapper--fixed">
+
+        <div class="b-lazy  hero  hero--fixed" data-src="img/half-hero-bg.jpg">
+          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->
+
+          <div class="container  container--full  hero__text  hero__text--fixed">
+
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <div class="hero__text-inner">
+
+              <div class="hero__text-inner-left">
+
+                <h1 class="hero__title">Тендер
+                  <!-- <span class="hero__slogan">Група компаній PAKLINE</span> -->
+                </h1>
+
+                <!-- <div class="hero__text-inner-btn">
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                </div> -->
+
+              </div>
+
+              <div class="hero__text-inner-right">
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        @@include('blocks/page-header/page-header.html')
+
+      </div>
+
+      <main id="main-content" role="main">
+
+        <div class="container  text-page">
+          <div class="row">
+            <div class="text-page__col">
+              <article>
+                <span class="date-time  date-time--article">31.12.2021 | 16:00</span>
+                <h2>Описание</h2>
+                <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THE SITE. THESE WEBSITE TERMS OF USE (THE “TERMS OF USE”) GOVERN YOUR ACCESS TO AND USE OF THE SITE</p>
+
+                <p>By using the website located at www.xpo.com and all related sites (the “Site”), you signify your agreement with these Terms of Use. If you do not agree with any of the below Terms of Use, do not use the Site. XPO Logistics reserves the right, in its sole discretion, to modify, alter or otherwise update these Terms of Use at any time. Such modifications shall be effective immediately upon posting of the modified Terms of Use. By using the Site after we have posted notice of such modifications, alterations or updates, you agree to be bound by the revised terms. XPO Logistics retains the right to deny access to anyone at its complete discretion for any reason, including for violation of any of these Terms of Use.</p>
+                <p>All references to “XPO Logistics” made within these Terms of Use shall be references to and include XPO Logistics, Inc. and its subsidiaries (“XPO Logistics”)</p>
+              </article>
+
+              <div class="text-page__block">
+                <h4>Ссылки на документы</h4>
+
+                <ul class="list-nostyled">
+                  <li>
+                    <a href="#" download>doc-1.doc</a>
+                  </li>
+                  <li>
+                    <a href="#" download>doc-2.doc</a>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="text-page__block">
+                <h4>Подать заявку на тендер</h4>
+
+                <form id="tenderForm" class="form" action="" method="post" enctype="multipart/form-data">
+
+                  <div class="row">
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="code" value="" placeholder="Код ЄДРПОУ">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="num-vat" value="" placeholder="Номер платника ПДВ">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="passport" value="" placeholder="Паспорт (для ФОП)">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="fio" value="" placeholder="ПІБ контактної особи">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input  phone-mask" type="text" name="tel" value="" placeholder="Телефон">
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <div class="field-file">
+                        <!-- <div class="field-file__name">Выбор файлов</div> -->
+                        <label class="field-file__input-wrap">
+                          <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}">
+                          <div class="field-file__name-text" data-button-text="Загрузить резюме">
+                            <span>Ничего не выбрано</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form__col-1-2  form__col-1-2--action">
+                      <div class="field-actions">
+                        <input class="btn  btn-submit" type="submit" name="submitContactForm" value="Отправить заявку">
+                      </div>
+                    </div>
+
+                    <div class="form__col-1-2">
+                      <div class="field-checkbox  field-checkbox--action">
+                        <label class="field-checkbox__name">
+                          <input id="agreement" class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                          <span class="field-checkbox__name-text">Я согласен на обработку персональных данных</span>
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
