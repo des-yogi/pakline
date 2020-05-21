@@ -30,4 +30,25 @@ $line-height:                 1.375em !default;
     line-height: $line-height;
     color: currentColor;
   }
+
+  &__col-1-2 {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xxl, 6, $grid-columns, 48px);
+    margin-bottom: 20px;
+
+    &:last-child {
+      @include col-offset(lg, 6);
+    }
+
+    &--action {
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+  }
 }

@@ -1,7 +1,14 @@
 .burger {
+  padding: 0;
 
   @media (min-width: $screen-lg) {
     display: none;
+  }
+
+  svg {
+    display: block;
+    width: 27px;
+    height: 22px;
   }
 
   $block-name:                &; // #{$block-name}__element

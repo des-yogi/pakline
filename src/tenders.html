@@ -17,6 +17,7 @@
       <div class="page-header__wrapper">
 
         <div class="hero">
+
           <div class="hero__media">
             <!-- <video id="hero-movie" poster="img/hero-img.jpg" preload muted autoplay loop>
               <source src="video/hero.mp4" type="video/mp4">
@@ -24,20 +25,39 @@
               <p>Ваш браузер не поддерживает HTML5 видео</p>
             </video> -->
             <picture>
-              <source srcset="img/hero-img.webp" media="(min-width: 1280px)" type="image/webp">
-              <source srcset="img/hero-img.jpg" media="(min-width: 1280px)">
+              <source data-srcset="img/hero-img.webp" media="(min-width: 1280px)" type="image/webp">
+              <source data-srcset="img/hero-img.jpg" media="(min-width: 1280px)">
               <!-- 1920x1200 -->
-              <source srcset="img/hero-img.webp" type="image/webp">
-              <img src="img/hero-img.jpg" alt="Заставка" width="1280" height="800">
+              <source data-srcset="img/hero-img.webp" type="image/webp">
+              <img class="b-lazy" data-src="img/hero-img.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Заставка" width="1280" height="800">
             </picture>
           </div>
-          <div class="container  container--full  hero__text  hero__text--noindex">
-            <h1 class="hero__title">Тендери<span class="hero__slogan">Нижче ви знайдете інформацію щодо Правил подання пропозицій та оголошених закупівель</span></h1>
 
-            <div class="hero__btns-wrapper">
-              <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
-              <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+          <div class="container  container--full  hero__text  hero__text--fixed">
+
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <div class="hero__text-inner">
+
+              <div class="hero__text-inner-left">
+
+                <h1 class="hero__title">Тендери<span class="hero__slogan">Нижче ви знайдете інформацію щодо Правил подання пропозицій та оголошених закупівель</span></h1>
+
+                <div class="hero__text-inner-btn">
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                  <!-- <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a> -->
+                </div>
+
+              </div>
+
+              <div class="hero__text-inner-right">
+
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+
+              </div>
+
             </div>
+
           </div>
         </div>
 

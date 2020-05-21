@@ -1,0 +1,107 @@
+.media-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 92px;
+    margin-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+
+  }
+
+  &__col-text {
+    order: 1;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 50%;
+    }
+  }
+
+  &__col-img {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-right: 48px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 48px;
+      $padding-min: 230px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      padding-right: calc(100% - #{$half-screen-xxl});
+    }
+  }
+
+  &__img {
+
+    @media (min-width: $screen-xxl) {
+      max-width: 960px;
+      margin-left: auto;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &:nth-of-type(even),
+  &--reverse {
+
+    #{$block-name}__col-text {
+
+      @media (min-width: $screen-md) {
+        order: 0;
+      }
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-lg) {
+        padding-left: 48px;
+        padding-right: 24px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        padding-right: 48px;
+        $padding-min: 230px; // нужный отступ от краев экрана
+        $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+        padding-left: calc(100% - #{$half-screen-xxl});
+      }
+    }
+
+    #{$block-name}__img {
+
+      @media (min-width: $screen-xxl) {
+        margin-right: auto;
+      }
+    }
+  }
+}

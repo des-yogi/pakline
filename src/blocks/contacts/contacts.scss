@@ -1,0 +1,313 @@
+.contacts {
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__left {
+    padding: 0 15px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      //width: calc(100% / 3 - 12px);
+      width: 33.33333%;
+      padding-left: 48px;
+      padding-right: 24px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: calc(100% / 3 + 48px);
+      $padding-min: 230px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      padding-left: calc(50% - #{$half-screen-xxl});
+      padding-right: 24px;
+    }
+  }
+
+  &__right {
+    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      //width: calc(100% / 3 * 2 - 12px);
+      width: 66.66667%;
+      padding-left: 24px;
+      padding-right: 48px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: calc(100% / 3 * 2 - 48px);
+      $padding-min: 230px; // нужный отступ от краев экрана
+      $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+      padding-right: calc(50% - #{$half-screen-xxl});
+      padding-left: 46px;
+    }
+  }
+
+  &__address {
+    padding: 32px 0;
+    color: $white;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-right: 24px;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -0.1px;
+        bottom: -0.1px;
+        right: -24.5px;
+        width: 24px;
+        background-color: $white;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+      padding-right: 48px;
+    }
+  }
+
+  &__address-item {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 12px);
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 32px;
+      }
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  &__address-title {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  &__list-item {
+
+    & + & {
+      margin-top: 0.5em;
+    }
+  }
+
+  &__address-link {
+    display: inline-block;
+    vertical-align: top;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+
+  &__form-wrapper {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__form-title {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  &__form {
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__form-section {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .field-checkbox--action {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &--messages {
+
+      @media (min-width: $screen-md) {
+        width: calc(100% * 0.75 - 24px);
+      }
+
+      .field-text {
+        width: 100%;
+      }
+    }
+
+    &--action {}
+  }
+
+  &__form-subtitle {
+    width: 100%;
+    margin-bottom: 1em;
+    font-weight: 600;
+  }
+
+  &__form-col {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: calc(50% - 12px);
+    }
+
+    .field-text {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .field-checkbox {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__phones-block {
+
+  }
+
+  &__phones-block-title {
+    margin-bottom: 16px;
+  }
+
+  &__phones-wrapper {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__phones-unit {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 12px);
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+  }
+
+  &__phones-logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 135px;
+    max-width: 135px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+
+    @media (min-width: $screen-xxl) {
+      width: 200px;
+      max-width: 200px;
+    }
+  }
+
+  &__phones-list {
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__phones-item {
+    color: $text-color;
+
+    & + & {
+      margin-top: 0.4em;
+
+      @media (min-width: $screen-xxl) {
+        margin-top: 0.2em;
+      }
+    }
+  }
+
+  &__phones-title {
+    font-weight: 600;
+  }
+
+  &__phones-link {
+    color: inherit;
+  }
+}

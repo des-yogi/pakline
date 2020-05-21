@@ -139,7 +139,7 @@ a {
 
   &:hover,
   &:focus {
-    text-decoration: initial;
+    text-decoration: underline;
     color: $link-color--hover;
   }
 
@@ -322,6 +322,10 @@ a {
 
   @media (min-width: $screen-xl) {
     font-size: 20px;
+  }
+
+  &--article {
+    margin-bottom: 16px;
   }
 }
 
