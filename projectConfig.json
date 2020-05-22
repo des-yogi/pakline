@@ -48,7 +48,10 @@
     "map": [],
     "services-scroll": [],
     "text-page": [],
-    "field-file": []
+    "field-file": [],
+    "career-block": [],
+    "vacancy-block": [],
+    "field-select": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

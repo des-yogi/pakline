@@ -1,0 +1,112 @@
+.vacancy-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xxl, 6, $grid-columns, 48px);
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .field-text,
+    .field-checkbox {
+      margin-bottom: 20px;
+    }
+
+    .btn-submit {
+
+      @media (min-width: $screen-md) {
+        max-width: 190px;
+      }
+    }
+
+    &--form {
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+    }
+
+    &--action {
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .field-text {
+
+        @media (min-width: $screen-lg) {
+          margin-bottom: auto;
+        }
+      }
+
+      .field-checkbox {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__form {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+
+    &--all {
+
+      #{$block-name}__list-city {
+        margin-top: 0.1em;
+      }
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 16px;
+    color: $main-color;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-city {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-weight: 600;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+  }
+}
