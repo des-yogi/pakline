@@ -308,6 +308,19 @@ a {
       color: $main-color;
     }
   }
+
+  .user-icon,
+  .globe-icon {
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+
+  .burger-icon {
+    display: block;
+    width: 27px;
+    height: 22px;
+  }
 }
 
 .date-time {
