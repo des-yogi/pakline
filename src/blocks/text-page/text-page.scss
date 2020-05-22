@@ -27,6 +27,10 @@
     margin-top: 0.5em;
   }
 
+  .full-width-banner {
+    //margin-bottom: 0;
+  }
+
   &__col {
     @include col(xs, 12, $grid-columns, 30px);
     @include col-offset(md, 2);
