@@ -17,7 +17,8 @@
   &__content {
 
     @media (min-width: $screen-md) {
-      columns: auto 2;
+      column-width: auto;
+      column-count: 2;
       column-gap: 24px;
       column-fill: balance-all;
     }
