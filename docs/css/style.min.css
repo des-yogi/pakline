@@ -2190,9 +2190,9 @@ ul {
           justify-content: space-between;
   background-color: #131c22; }
 .service-gallery__col {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     width: 100%; }
 .service-gallery__col:last-child {
       -webkit-box-flex: 0;
@@ -3535,8 +3535,8 @@ ul {
       .hero__slogan {
         margin-top: 16px; }
       .service-gallery__col {
-        -ms-flex-preferred-size: calc(100% / 3);
-            flex-basis: calc(100% / 3);
+        -ms-flex-preferred-size: 33.33333%;
+            flex-basis: 33.33333%;
         width: calc(100% / 3); }
       .service-gallery-item__text {
         padding-left: 48px;
