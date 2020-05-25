@@ -20,9 +20,8 @@
     }
 
     @media (min-width: $screen-lg) {
-      flex-basis: calc(100% / 3);
+      flex-basis: 33.33333%;
       width: calc(100% / 3);
     }
   }
-
 }

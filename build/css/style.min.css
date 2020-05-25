@@ -3535,8 +3535,8 @@ ul {
       .hero__slogan {
         margin-top: 16px; }
       .service-gallery__col {
-        -ms-flex-preferred-size: calc(100% / 3);
-            flex-basis: calc(100% / 3);
+        -ms-flex-preferred-size: 33.33333%;
+            flex-basis: 33.33333%;
         width: calc(100% / 3); }
       .service-gallery-item__text {
         padding-left: 48px;
