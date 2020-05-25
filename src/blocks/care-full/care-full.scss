@@ -22,10 +22,10 @@
 
   &__col-logo {
     display: none;
-    @include col-offset(lg, 2);
-    @include col(lg, 2);
-    @include col-offset(xxl, 2);
-    @include col(xxl, 2, $grid-columns, 48px);
+    //@include col-offset(lg, 2);
+    @include col(lg, 4);
+    //@include col-offset(xxl, 2);
+    @include col(xxl, 4, $grid-columns, 48px);
 
     @media (min-width: $screen-lg) {
       display: flex;

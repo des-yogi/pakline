@@ -51,7 +51,8 @@
     "field-file": [],
     "career-block": [],
     "vacancy-block": [],
-    "field-select": []
+    "field-select": [],
+    "cookie-popup": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -70,6 +71,7 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/metismenu/dist/metisMenu.js",
+    "./src/js/libs/cookieconsent.js",
     "./src/js/libs/popper.min.js",
     "./src/js/libs/util.min.js",
     "./src/js/libs/collapse.js"
