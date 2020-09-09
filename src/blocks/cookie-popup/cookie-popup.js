@@ -13,7 +13,7 @@
     "position": "bottom-right",
     "content": {
       "message": "Этот сайт использует файлы cookie в соответствии с <a href='https://www.cookiesandyou.com/'>Политикой использования файлов cookie</a>. Если Вы согласны на использование нами файлов cookie, то нажмите кнопку «Принять».",
-      "dismiss": "Принять",
+      "dismiss": "Принять!",
       "link": "Подробнее"
     }
   });

@@ -25,6 +25,11 @@
     border: 0;
   }
 
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+
   &--16-10 {
 
     &::before {

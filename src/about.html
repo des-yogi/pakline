@@ -19,18 +19,18 @@
         <div class="hero">
 
           <div class="hero__media">
-            <!-- <video id="hero-movie" poster="img/hero-img.jpg" preload muted autoplay loop>
+            <video id="hero-movie" poster="img/hero-img.jpg" preload muted autoplay loop>
               <source src="video/hero.mp4" type="video/mp4">
               <source src="video/hero.webm" type="video/webm">
               <p>Ваш браузер не поддерживает HTML5 видео</p>
-            </video> -->
-            <picture>
+            </video>
+            <!-- <picture>
               <source data-srcset="img/hero-img.webp" media="(min-width: 1280px)" type="image/webp">
               <source data-srcset="img/hero-img.jpg" media="(min-width: 1280px)">
-              <!-- 1920x1200 -->
+              1920x1200
               <source data-srcset="img/hero-img.webp" type="image/webp">
               <img class="b-lazy" data-src="img/hero-img.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Заставка" width="1280" height="800">
-            </picture>
+            </picture> -->
           </div>
 
           <div class="container  container--full  hero__text  hero__text--fixed">
@@ -83,9 +83,18 @@
             <div class="media-block__col-img">
               <div class="embed-responsive  embed-responsive--4-3  media-block__img">
                 <picture>
+                  <source data-srcset="img/img-4x3-01.webp" media="(min-width: 1366px)" type="image/webp">
+                  <source data-srcset="img/img-4x3-01.jpg" media="(min-width: 1366px)">
+                  <!-- 960x720 -->
+                  <source data-srcset="img/img-4x3-01.webp" media="(min-width: 992px)" type="image/webp">
+                  <source data-srcset="img/img-4x3-01.jpg" media="(min-width: 992px)">
+                  <!-- 680x510 -->
+                  <source data-srcset="img/img-4x3-01.webp" media="(min-width: 768px)" type="image/webp">
+                  <source data-srcset="img/img-4x3-01.jpg" media="(min-width: 768px)">
+                  <!-- 500x375 -->
                   <source data-srcset="img/img-4x3-01.webp" media="(min-width: 480px)" type="image/webp">
                   <source data-srcset="img/img-4x3-01.jpg" media="(min-width: 480px)">
-                  <!-- 600x375 -->
+                  <!-- 600x450 -->
                   <source data-srcset="img/img-4x3-01.webp" type="image/webp">
                   <img class="b-lazy" data-src="img/img-4x3-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="300">
                 </picture>
