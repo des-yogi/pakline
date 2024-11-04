@@ -8,10 +8,10 @@ const browserSync = require('browser-sync').create();
 const realFavicon = require ('gulp-real-favicon');
 
 const postcss = require('gulp-postcss');
+const removeComments = require('postcss-discard-comments');
 const autoprefixer = require("autoprefixer");
 const mqpacker = require("css-mqpacker");
 const atImport = require("postcss-import");
-//const cleanss = require('gulp-cleancss'); Тестирование csso
 const csso = require('gulp-csso');
 const inlineSVG = require('postcss-inline-svg');
 const objectFitImages = require('postcss-object-fit-images');
@@ -51,14 +51,18 @@ const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
 // Перечисление и настройки плагинов postCSS, которыми обрабатываются стилевые файлы
 let postCssPlugins = [
-  autoprefixer(), // настройки вынесены в package.json, дабы получать их для любой задачи
+  atImport(),
+  autoprefixer({ grid: 'no-autoplace' }), // настройки вынесены в package.json, дабы получать их для любой задачи
   mqpacker({
     sort: true
   }),
-  atImport(),
   inlineSVG(),
   objectFitImages(),
 ];
+
+let discardComments = [
+  removeComments(),
+]
 
 // Очистка папки сборки
 gulp.task('clean', function () {
@@ -71,7 +75,7 @@ gulp.task('clean', function () {
 
 // Компиляция стилей блоков проекта (и добавочных)
 gulp.task('style', function () {
-  const sass = require('gulp-sass');
+  const sass = require('gulp-sass')(require('node-sass'));
   const sourcemaps = require('gulp-sourcemaps');
   const wait = require('gulp-wait');
   console.log('---------- Компиляция стилей');
@@ -90,6 +94,9 @@ gulp.task('style', function () {
     .pipe(debug({title: "Style:"}))
     .pipe(sass())
     .pipe(postcss(postCssPlugins))
+    .pipe(gulpIf(isDev,
+      postcss(discardComments)
+    ))
     .pipe(gulpIf(!isDev,
       csso({
         restructure: false,
@@ -109,7 +116,7 @@ gulp.task('style', function () {
 // Компиляция отдельных файлов
 gulp.task('style:single', function (callback) {
   if(projectConfig.singleCompiled.length) {
-    const sass = require('gulp-sass');
+    const sass = require('gulp-sass')(require('node-sass'));
     const sourcemaps = require('gulp-sourcemaps');
     const wait = require('gulp-wait');
     console.log('---------- Компиляция добавочных стилей');
@@ -308,9 +315,10 @@ gulp.task('sprite:svg', function (callback) {
         .pipe(svgmin(function (file) {
           return {
             plugins: [{
-              cleanupIDs: {
-                minify: true
-              }
+              name: 'cleanupIDs',
+              params: {
+                minify: true,
+              },
             }]
           }
         }))
@@ -402,14 +410,13 @@ gulp.task('html', function() {
       basepath: '@file',
       indent: true,
     }))
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(dirs.buildPath));
 });
 
 // Конкатенация и углификация Javascript
 gulp.task('js', function (callback) {
-  const uglify = require('gulp-uglify-es').default;// добавлен default
+  const uglify = require('gulp-uglify');
   const concat = require('gulp-concat');
   if(lists.js.length > 0){
     console.log('---------- Обработка JS');
@@ -465,7 +472,7 @@ gulp.task('img:opt', function (callback) {
 // Сборка всего новая под gulp 4
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sprite:svg', 'sprite:png', 'favicons'),
+  gulp.parallel('sprite:svg', 'sprite:png'),
   gulp.parallel('style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts', 'copy:video'),
   'html'
 ));
@@ -496,6 +503,7 @@ gulp.task('serve', gulp.series('build', function() {
     port: 3000,
     startPath: 'index.html',
     open: true,
+    https: true
   });
 
   // Стили

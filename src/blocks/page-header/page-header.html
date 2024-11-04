@@ -1,8 +1,10 @@
 <!--DEV
-@ @include('blocks/page-header/page-header.html')
+@ @include('blocks/page-header/page-header.html', {
+  "addClass": "page-header--visible"
+})
 -->
 
-<header id="page-header" class="page-header" role="banner">
+<header id="page-header" class="page-header  @@addClass">
   <div  class="container  container--full  page-header__inner">
 
     <div class="page-header__left">
@@ -15,7 +17,7 @@
         <ul id="metismenu" class="metismenu">
 
           <li class="metismenu__item">
-           <a class="has-arrow  metismenu__link" href="about.html" aria-expanded="false"><span>О компанії</span></a>
+           <a class="has-arrow  metismenu__link" href="about.html" aria-expanded="false"><span>PAKLINE GROUP</span></a>
            <ul class="mm-collapse  metismenu__submenu">
              <li class="active"><a href="#" class="metismenu__link">Пункт 1</a></li>
              <li><a href="text-page.html" class="metismenu__link">Пункт 2</a></li>
@@ -33,7 +35,7 @@
          </li>
 
          <li class="metismenu__item">
-           <a class="metismenu__link" href="tenders.html"><span>Тендери</span></a>
+           <a class="metismenu__link" href="tenders.html"><span>Складські комплекси</span></a>
          </li>
 
          <li class="metismenu__item">
@@ -97,11 +99,11 @@
 
       <div class="page-header__user-menu">
 
-        <a href="#" class="page-header__user-link  icon-link" title="Кабинет пользователя">
+        <!-- <a href="#" class="page-header__user-link  icon-link" title="Кабинет пользователя">
           <svg class="user-icon" width="27" height="27">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
           </svg>
-        </a>
+        </a> -->
 
         <div class="lang-switcher  dropdown" id="lang-switcher">
           <button class="dropdown-toggle  icon-link" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Переключатель языка">

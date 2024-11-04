@@ -1,31 +1,134 @@
-<!DOCTYPE html><html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#"><head>  <meta charset="utf-8">  <title>Текстовая страница</title>  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta name="MobileOptimized" content="320">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="format-detection" content="date=no">  <meta name="format-detection" content="address=no">  <meta name="format-detection" content="email=no">  <meta name="description" content>  <meta name="keywords" content>  <meta name="robots" content="index,follow">  <!-- OpenGraph microdata  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />  <meta property="og:type"          content="website" />  <meta property="og:title"         content="Your Website Title" />  <meta property="og:description"   content="Your description" />  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />  <meta property="og:locale"        content="uk_UA" />  -->  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/img/site.webmanifest">
-<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
-<link rel="shortcut icon" href="/img/favicon.ico">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
-<meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head><body><noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>  <div class="page__inner">    <div class="page__content">      <div class="page-header__wrapper  page-header__wrapper--fixed">        <div class="b-lazy  hero  hero--fixed  hero--fixed--noimg">          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->          <div class="container  container--full  hero__text  hero__text--fixed">            <!--DEV            @ @include('blocks/breadcrumbs/breadcrumbs.html')            -->            <nav class="breadcrumbs">              <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>              <ol class="list-nostyled  breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">                  <a itemprop="item" href="#" class="breadcrumbs__link" title="Главная">                   <span class="visually-hidden" itemprop="name">Главная</span>                   <meta itemprop="position" content="1">                  </a>                </li>                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">                  <a itemprop="item" href="#" class="breadcrumbs__link">                    <span itemprop="name">Страница 1</span>                    <meta itemprop="position" content="2">                  </a>                </li>                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">                  <a itemprop="item" href="#" class="breadcrumbs__link">                    <span itemprop="name">Страница 2</span>                    <meta itemprop="position" content="3">                  </a>                </li>              </ol>            </nav>            <div class="hero__text-inner">              <div class="hero__text-inner-left">                <h1 class="hero__title">Умови конфіденційності                  <!-- <span class="hero__slogan">Група компаній PAKLINE</span> -->                </h1>                <!-- <div class="hero__text-inner-btn">                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>                </div> -->              </div>              <div class="hero__text-inner-right">                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>              </div>            </div>          </div>        </div>        <!--DEV
-        @ @include('blocks/page-header/page-header.html')
-        -->
-        <header id="page-header" class="page-header" role="banner">
-          <div class="container  container--full  page-header__inner">
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Текстовая страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+  <meta name='format-detection' content="date=no">
+  <meta name='format-detection' content="address=no">
+  <meta name='format-detection' content="email=no">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index,follow">
+  <!-- OpenGraph microdata
+  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta property="og:locale"        content="uk_UA" />
+  -->
+  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->
+  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper  page-header__wrapper--fixed">
+
+        <div class="b-lazy  hero  hero--fixed  hero--fixed--noimg">
+          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->
+
+          <div class="container  container--full  hero__text  hero__text--fixed">
+
+            <nav class="breadcrumbs" aria-label="Breadcrumbs">
+
+              <ol class="list-nostyled  breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                  itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" href="#" class="breadcrumbs__link" title="Главная">
+                   <span class="visually-hidden" itemprop="name">Главная</span>
+                   <meta itemprop="position" content="1">
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                  itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" href="#" class="breadcrumbs__link">
+                    <span itemprop="name">Страница 1</span>
+                    <meta itemprop="position" content="2">
+                  </a>
+                </li>
+
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                  itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" href="#" class="breadcrumbs__link">
+                    <span itemprop="name">Страница 2</span>
+                    <meta itemprop="position" content="3">
+                  </a>
+                </li>
+
+              </ol>
+            </nav>
+
+
+            <div class="hero__text-inner">
+
+              <div class="hero__text-inner-left">
+
+                <h1 class="hero__title">Умови конфіденційності
+                  <!-- <span class="hero__slogan">Група компаній PAKLINE</span> -->
+                </h1>
+
+                <!-- <div class="hero__text-inner-btn">
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                  <a href="#" class="btn  btn__secondary  btn__secondary--download" download>Завантажити правила</a>
+                </div> -->
+
+              </div>
+
+              <div class="hero__text-inner-right">
+
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <header id="page-header" class="page-header  ">
+          <div  class="container  container--full  page-header__inner">
+
             <div class="page-header__left">
+
               <a href="index.html" class="logo" title="Pakline Group logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>
               </a>
+
               <nav id="main-nav" class="main-nav  topbar-nav  is-hoverable" role="navigation">
                 <ul id="metismenu" class="metismenu">
+
                   <li class="metismenu__item">
-                   <a class="has-arrow  metismenu__link" href="about.html" aria-expanded="false"><span>О компанії</span></a>
+                   <a class="has-arrow  metismenu__link" href="about.html" aria-expanded="false"><span>PAKLINE GROUP</span></a>
                    <ul class="mm-collapse  metismenu__submenu">
                      <li class="active"><a href="#" class="metismenu__link">Пункт 1</a></li>
                      <li><a href="text-page.html" class="metismenu__link">Пункт 2</a></li>
                      <li><a href="text-page.html" class="metismenu__link">Пункт 3</a></li>
                    </ul>
                  </li>
+
                  <li class="metismenu__item  active">
                    <a class="has-arrow  metismenu__link" href="about.html" aria-expanded="false"><span>Логістичні рішення</span></a>
                    <ul class="mm-collapse  metismenu__submenu">
@@ -34,26 +137,35 @@
                      <li><a href="text-page.html" class="metismenu__link">Транспортні послуги</a></li>
                    </ul>
                  </li>
+
                  <li class="metismenu__item">
-                   <a class="metismenu__link" href="tenders.html"><span>Тендери</span></a>
+                   <a class="metismenu__link" href="tenders.html"><span>Складські комплекси</span></a>
                  </li>
+
                  <li class="metismenu__item">
                    <a class="metismenu__link" href="career.html"><span>Кар'єра</span></a>
                  </li>
+
                  <li class="metismenu__item">
                    <a class="metismenu__link" href="contacts.html"><span>Контакты</span></a>
                  </li>
+
                 </ul>
               </nav>
+
             </div>
+
             <div class="page-header__right">
+
               <div class="page-header__service-menu">
+
                 <div class="dropdown  dropdown--menu">
                   <button class="dropdown-toggle  dropdown-toggle--menu" type="button" id="orderSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Відстежити замовлення
                   </button>
                   <div class="dropdown-menu  search-form" aria-labelledby="orderSearch">
                     <p class="search-form__caption">Відстежити замовлення</p>
+
                     <form id="search-form" class="search-form__form" action="#" method="post">
                       <div class="search-form__input-wrapper">
                         <label class="field-text">
@@ -61,9 +173,10 @@
                             <input class="field-text__input" type="text" placeholder="Номер накладної">
                           </span>
                         </label>
-                        <input class="btn  btn--submit" type="submit" name="submitForm" value>
+                        <input class="btn  btn--submit" type="submit" name="submitForm" value="">
                       </div>
                     </form>
+
                     <div class="search-form__result-wrapper">
                       <table>
                         <tr>
@@ -75,24 +188,31 @@
                         </tr>
                       </table>
                     </div>
+
                     <div class="search-form__call">
                       <p>Виникли питання? Телефонуйте!</p>
                       <a href="tel:+0800303006" class="search-form__call-link">0800303006</a>
                     </div>
+
                   </div>
                 </div>
+
                 <a href="#" class="btn">Стати клієнтом</a>
+
               </div>
+
               <div class="page-header__user-menu">
-                <a href="#" class="page-header__user-link  icon-link" title="Кабинет пользователя">
+
+                <!-- <a href="#" class="page-header__user-link  icon-link" title="Кабинет пользователя">
                   <svg class="user-icon" width="27" height="27">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
                   </svg>
-                </a>
+                </a> -->
+
                 <div class="lang-switcher  dropdown" id="lang-switcher">
                   <button class="dropdown-toggle  icon-link" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Переключатель языка">
                     <svg class="globe-icon" width="27" height="27">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"/>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"></use>
                     </svg>
                   </button>
                   <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="lang-switcher">
@@ -106,38 +226,162 @@
                     </ul>
                   </div>
                 </div>
-                <button class="burger icon-link" type="button" data-drawer-trigger aria-controls="drawer-menu" aria-expanded="false" title="Переключатель мобильного меню">
+
+                <button class="burger icon-link" type="button" data-drawer-trigger="" aria-controls="drawer-menu" aria-expanded="false" title="Переключатель мобильного меню">
                   <svg class="burger-icon" width="27" height="22">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"/>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"></use>
                   </svg>
                 </button>
+
               </div>
+
             </div>
+
           </div>
         </header>
-      </div>      <main id="main-content" role="main">        <div class="container  text-page">          <div class="row">            <div class="text-page__col">              <article>                <h2>TERMS OF USE</h2>                <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THE SITE. THESE WEBSITE TERMS OF USE (THE “TERMS OF USE”) GOVERN YOUR ACCESS TO AND USE OF THE SITE.</p>                <p>By using the website located at www.xpo.com and all related sites (the “Site”), you signify your agreement with these Terms of Use. If you do not agree with any of the below Terms of Use, do not use the Site. XPO Logistics reserves the right, in its sole discretion, to modify, alter or otherwise update these Terms of Use at any time. Such modifications shall be effective immediately upon posting of the modified Terms of Use. By using the Site after we have posted notice of such modifications, alterations or updates, you agree to be bound by the revised terms. XPO Logistics retains the right to deny access to anyone at its complete discretion for any reason, including for violation of any of these Terms of Use.</p>                <p>All references to “XPO Logistics” made within these Terms of Use shall be references to and include XPO Logistics, Inc. and its subsidiaries (“XPO Logistics”)</p>                <h2>TRADEMARKS, COPYRIGHTS AND RESTRICTIONS</h2>                <p>This site is controlled and operated by XPO Logistics or its representatives. All material on the Site, including, but not limited to, images, illustrations, audio clips and video clips, is protected by copyrights, trademarks, registered and unregistered, and other intellectual property rights which are owned and controlled by XPO Logistics or by other parties that have licensed their material to XPO Logistics. Material from any web site owned, operated, licensed, or controlled by XPO Logistics may not be copied, reproduced, republished, modified, uploaded, posted, transmitted, or distributed in any way, including by email or other electronic means unless otherwise agreed to in writing by XPO Logistics. The materials on the Site may not be used for commercial benefit without prior expressed written permission by XPO Logistics.</p>                <p>XPO Logistics authorizes you to view and access a single copy of the content available on or from the Site solely for your personal use, and any modification of the materials on the Site or use of the materials for any other purpose is a violation of the copyrights and other proprietary rights. Except as expressly allowed by these Terms of Use and/or some other written agreement between you and XPO Logistics, the use of any such material on any other website or networked computer environment is prohibited. The Site may contain other proprietary notices, trademark and/or copyright information, the terms of which must be observed and followed. Information on the Site may be changed or updated without notice.</p>                <p>In addition, decompiling, reverse engineering, disassembling, or otherwise reducing the code used in any software on the Site into a readable form in order to examine the construction of such software and/or to copy or create other products based (in whole or in part) on such software, is prohibited. You shall not engage in “spidering,” “screen scraping,” “database scraping,” harvesting of user information, or any other automatic means of accessing, logging-in or registering on this website, or obtaining or accessing any information from or through the Site. You shall not use the Site in any manner with the intent to interrupt, damage, disable, overburden or impair the Site, or interfere with any other party’s use and enjoyment of the Site, including, without limitation, sending mass unsolicited messages or “flooding” servers with requests. You shall not obtain or attempt to obtain any materials or information through any means not intentionally made publicly available or provided for through the Site.</p>                <p>You may not use the Site in order to transmit, post, distribute, store or destroy material, including without limitation, content from the Site, (a) in violation of any applicable law or regulation, (b) in a manner that will infringe the copyright, trademark, trade secret or other intellectual property rights of XPO Logistics or any other third party, or violate the privacy, publicity or other personal rights of others, or (c) that is defamatory, obscene, threatening, abusive or hateful.</p>              </article>            </div>          </div>        </div>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV      Нужно убрать пробел между @-ами:      @ @include('blocks/page-footer/page-footer.html')      -->      <footer class="page-footer" role="contentinfo">        <div class="container  page-footer__top">          <div class="row" itemscope itemtype="http://schema.org/LocalBusiness">            <div class="page-footer__col-logo">              <a href="index.html" class="logo  logo--footer" title="Pakline Group logo">                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>                <span class="visually-hidden" itemprop="name">Pakline Group</span>              </a>            </div>            <div class="page-footer__col-address">              <div class="page-footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">                <h6 class="page-footer__title">Адреса</h6>                <p><span itemprop="addressRegion">Україна,</span> <span itemprop="postalCode">49000,</span> <span itemprop="addressLocality">м. Дніпро,</span> <span itemprop="streetAddress">вул. Січових Стрільців, 94</span></p>              </div>            </div>            <div class="page-footer__col-email">              <h6 class="page-footer__title">Email</h6>              <ul class="list-nostyled  page-footer__email-list">                <li class="page-footer__email-item">                  <a href="mailto:info@pakline.com.ua" class="page-footer__link" itemprop="email">info@pakline.com.ua</a>                </li>                <li class="page-footer__email-item">                  <a href="mailto:korsa@pakline.com.ua" class="page-footer__link" itemprop="email">korsa@pakline.com.ua</a>                </li>              </ul>            </div>            <div class="page-footer__col-tel">              <h6 class="page-footer__title">Зателефонуйте експерту</h6>              <a href="tel:+0800303006" class="page-footer__link" itemprop="telephone">0800303006</a>            </div>            <div class="page-footer__col-social">              <div class="page-footer__social">                <button class="btn  btn__secondary" type="button">Форма зв'язку</button>                <section class="socials">                  <h6 class="visually-hidden">Мы в соцсетях</h6>                  <ul class="list-nostyled  socials__list">                    <li class="socials__item">                      <a href="#" class="socials__link  socials__link--insta" aria-label="Instagram" target="_blank" rel="nofollow noopener"></a>                    </li>                    <li class="socials__item">                      <a href="#" class="socials__link  socials__link--fb" aria-label="Facebook" target="_blank" rel="nofollow noopener"></a>                    </li>                    <li class="socials__item">                      <a href="#" class="socials__link  socials__link--youtube" aria-label="Youtube" target="_blank" rel="nofollow noopener"></a>                    </li>                  </ul>                </section>              </div>            </div>          </div>        </div>        <section class="copyrights">          <div class="container">            <div class="row">              <div class="copyrights__left">                <span class="copyrights__owner">© 1995 - 2020 Pakline Group.</span>                <a href="#" class="copyrights__link">Умови конфіденційності.</a>                <a href="#" class="copyrights__link">Умови використання сайту</a>              </div>              <div class="copyrights__right">                <span class="copyrights__dev">Developed by:</span>                <a href="#" class="copyrights__link" target="_blank" rel="nofollow noopener">IT Doors</a>              </div>            </div>          </div>        </section>      </footer>    </div>    <!--DEV
-    @ @include('blocks/drawer/drawer.html')
-    -->
+
+
+      </div>
+
+      <main id="main-content" role="main">
+
+        <div class="container  text-page">
+          <div class="row">
+            <div class="text-page__col">
+              <article>
+                <h2>TERMS OF USE</h2>
+                <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THE SITE. THESE WEBSITE TERMS OF USE (THE “TERMS OF USE”) GOVERN YOUR ACCESS TO AND USE OF THE SITE.</p>
+                <p>By using the website located at www.xpo.com and all related sites (the “Site”), you signify your agreement with these Terms of Use. If you do not agree with any of the below Terms of Use, do not use the Site. XPO Logistics reserves the right, in its sole discretion, to modify, alter or otherwise update these Terms of Use at any time. Such modifications shall be effective immediately upon posting of the modified Terms of Use. By using the Site after we have posted notice of such modifications, alterations or updates, you agree to be bound by the revised terms. XPO Logistics retains the right to deny access to anyone at its complete discretion for any reason, including for violation of any of these Terms of Use.</p>
+                <p>All references to “XPO Logistics” made within these Terms of Use shall be references to and include XPO Logistics, Inc. and its subsidiaries (“XPO Logistics”)</p>
+
+                <h2>TRADEMARKS, COPYRIGHTS AND RESTRICTIONS</h2>
+
+                <p>This site is controlled and operated by XPO Logistics or its representatives. All material on the Site, including, but not limited to, images, illustrations, audio clips and video clips, is protected by copyrights, trademarks, registered and unregistered, and other intellectual property rights which are owned and controlled by XPO Logistics or by other parties that have licensed their material to XPO Logistics. Material from any web site owned, operated, licensed, or controlled by XPO Logistics may not be copied, reproduced, republished, modified, uploaded, posted, transmitted, or distributed in any way, including by email or other electronic means unless otherwise agreed to in writing by XPO Logistics. The materials on the Site may not be used for commercial benefit without prior expressed written permission by XPO Logistics.</p>
+
+                <p>XPO Logistics authorizes you to view and access a single copy of the content available on or from the Site solely for your personal use, and any modification of the materials on the Site or use of the materials for any other purpose is a violation of the copyrights and other proprietary rights. Except as expressly allowed by these Terms of Use and/or some other written agreement between you and XPO Logistics, the use of any such material on any other website or networked computer environment is prohibited. The Site may contain other proprietary notices, trademark and/or copyright information, the terms of which must be observed and followed. Information on the Site may be changed or updated without notice.</p>
+
+                <p>In addition, decompiling, reverse engineering, disassembling, or otherwise reducing the code used in any software on the Site into a readable form in order to examine the construction of such software and/or to copy or create other products based (in whole or in part) on such software, is prohibited. You shall not engage in “spidering,” “screen scraping,” “database scraping,” harvesting of user information, or any other automatic means of accessing, logging-in or registering on this website, or obtaining or accessing any information from or through the Site. You shall not use the Site in any manner with the intent to interrupt, damage, disable, overburden or impair the Site, or interfere with any other party’s use and enjoyment of the Site, including, without limitation, sending mass unsolicited messages or “flooding” servers with requests. You shall not obtain or attempt to obtain any materials or information through any means not intentionally made publicly available or provided for through the Site.</p>
+
+                <p>You may not use the Site in order to transmit, post, distribute, store or destroy material, including without limitation, content from the Site, (a) in violation of any applicable law or regulation, (b) in a manner that will infringe the copyright, trademark, trade secret or other intellectual property rights of XPO Logistics or any other third party, or violate the privacy, publicity or other personal rights of others, or (c) that is defamatory, obscene, threatening, abusive or hateful.</p>
+
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+
+        <div class="container  page-footer__top">
+          <div class="row"  itemscope itemtype="http://schema.org/LocalBusiness">
+
+            <div class="page-footer__col-logo">
+              <a href="index.html" class="logo  logo--footer" title="Pakline Group logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>
+                <span class="visually-hidden" itemprop="name">Pakline Group</span>
+              </a>
+            </div>
+
+            <div class="page-footer__col-address">
+              <div class="page-footer__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <h6 class="page-footer__title">Адреса</h6>
+                <p><span itemprop="addressRegion">Україна,</span> <span itemprop="postalCode">49000,</span> <span itemprop="addressLocality">м. Дніпро,</span> <span itemprop="streetAddress">вул. Січових Стрільців, 94</span></p>
+              </div>
+            </div>
+
+            <div class="page-footer__col-email">
+              <h6 class="page-footer__title">Email</h6>
+              <ul class="list-nostyled  page-footer__email-list">
+                <li class="page-footer__email-item">
+                  <a href="mailto:info@pakline.com.ua" class="page-footer__link" itemprop="email">info@pakline.com.ua</a>
+                </li>
+                <li class="page-footer__email-item">
+                  <a href="mailto:korsa@pakline.com.ua" class="page-footer__link" itemprop="email">korsa@pakline.com.ua</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-footer__col-tel">
+              <h6 class="page-footer__title">Зателефонуйте експерту</h6>
+              <a href="tel:+0800303006" class="page-footer__link" itemprop="telephone">0800303006</a>
+            </div>
+
+            <div class="page-footer__col-social">
+              <div class="page-footer__social">
+                <button class="btn  btn__secondary" type="button">Форма зв'язку</button>
+                <section class="socials">
+                  <h6 class="visually-hidden">Мы в соцсетях</h6>
+                  <ul class="list-nostyled  socials__list">
+                    <li class="socials__item">
+                      <a href="#" class="socials__link  socials__link--insta" aria-label="Instagram" target="_blank" rel="nofollow noopener"></a>
+                    </li>
+                    <li class="socials__item">
+                      <a href="#" class="socials__link  socials__link--fb" aria-label="Facebook" target="_blank" rel="nofollow noopener"></a>
+                    </li>
+                    <li class="socials__item">
+                      <a href="#" class="socials__link  socials__link--youtube" aria-label="Youtube" target="_blank" rel="nofollow noopener"></a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <section class="copyrights">
+          <div class="container">
+            <div class="row">
+
+              <div class="copyrights__left">
+                <span class="copyrights__owner">© 1995 - 2020 Pakline Group.</span>
+                <a href="#" class="copyrights__link">Умови конфіденційності.</a>
+                <a href="#" class="copyrights__link">Умови використання сайту</a>
+              </div>
+
+              <div class="copyrights__right">
+                <span class="copyrights__dev">Developed by:</span>
+                <a href="#" class="copyrights__link" target="_blank" rel="nofollow noopener">IT Doors</a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </footer>
+
+    </div>
+
     <section class="drawer" id="drawer-menu" data-drawer-target>
       <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
       <div class="drawer__wrapper">
         <div class="drawer__header">
+
           <div class="page-header__left">
             <a href="index.html" class="logo  logo--mob-menu" title="Pakline Group logo">
-              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52"><g id="icon"><path d="M49.51,42.55,58,25.4,44.62,0H13L26.72,25.77,13.67,52h31.1l4.66-9.38h-.07l0-.07ZM40,42.76l-13.59.18L35,25.65l-9.09-17,13.62-.18L48.63,25.5Z"/><polygon points="12.55 13.42 9.5 7.96 0 25.77 9.66 45.17 12.73 39.38 5.96 25.77 12.55 13.42"/></g><g id="text"><path d="M87.07,45.56a10.75,10.75,0,0,1-4.3.89c-4.46,0-9.07-2.28-9.07-8.48,0-6,4.55-8.48,8.94-8.48a11.27,11.27,0,0,1,5.6,1.39V29.21a13.62,13.62,0,0,0-5.83-1.28C77.24,27.93,72,31.13,72,38c0,7.26,5.29,10,10.63,10a14.78,14.78,0,0,0,6.11-1.31V37.44H87.07Z"/><path d="M108,34c0-4.33-3.77-5.78-7.21-5.78H93.25V47.7h1.64V39.83h5.51l6.86,7.86h2.08l-7-8C105.2,39.33,108,37.75,108,34ZM94.93,38.24V29.82h6c2.58,0,5.4.94,5.4,4.2s-2.81,4.22-5.4,4.22Z"/><path d="M121.35,27.93c-6.87,0-10.24,5.06-10.24,10a10.24,10.24,0,0,0,20.48,0A9.75,9.75,0,0,0,121.35,27.93Zm0,18.51A8.15,8.15,0,0,1,112.79,38a8.56,8.56,0,0,1,17.11,0A8.14,8.14,0,0,1,121.35,46.44Z"/><path d="M149.91,40.69c0,4.26-2.7,5.76-6.38,5.76s-6.42-1.51-6.42-5.76V28.24h-1.66V40.75c0,5.42,3.71,7.25,8.08,7.25s8.05-1.83,8.05-7.25V28.24h-1.67Z"/><path d="M163.26,28.24h-6.47V47.7h1.66V40.61h4.81c4.48,0,8.3-1.42,8.3-6.2S167.74,28.24,163.26,28.24Zm.09,10.8h-4.86v-9.2h4.86v0c3.57,0,6.52.95,6.52,4.61S166.89,39,163.35,39Z"/><path d="M76.53,16.2H78.7c4.09,0,7.19-1.33,7.19-5.61S82.78,5,78.7,5H72.18V21.32h4.35Zm0-7.47h2.4c1.32,0,2.48.39,2.48,1.86s-1.17,1.87-2.5,1.87H76.53Z"/><path d="M98.05,21.32h4.48L96.05,5H91.33L84.85,21.32h4.48l.94-2.56h6.84Zm-6.48-6.06,1.7-4.7A8,8,0,0,0,93.7,8.9a7.92,7.92,0,0,0,.42,1.66l1.7,4.7Z"/><polygon points="119.37 21.32 113.95 12.94 119.13 5 114.3 5 110.55 11.19 108.47 11.19 108.47 5 104.11 5 104.11 21.32 108.47 21.32 108.47 15.03 110.52 15.03 114.53 21.32 119.37 21.32"/><polygon points="125.12 5 120.76 5 120.76 21.32 132.66 21.32 132.66 17.48 125.12 17.48 125.12 5"/><rect x="134.53" y="5" width="4.36" height="16.32"/><path d="M156.86,5H152.5v6.66c0,.91,0,1.93.09,2.71L146.13,5H142V21.32h4.37V14.66c0-.89,0-1.91-.1-2.68l6.46,9.34h4.13Z"/><polygon points="164.34 17.59 164.34 14.94 171.14 14.94 171.14 11.23 164.34 11.23 164.34 8.74 171.86 8.74 171.86 5 159.97 5 159.97 21.32 172 21.32 172 17.59 164.34 17.59"/></g></svg>
             </a>
           </div>
+
           <div class="page-header__right">
+
             <div class="page-header__user-menu">
+
               <a href="#" class="page-header__user-link  icon-link  icon-link--mob-menu" title="Кабинет пользователя">
                 <svg class="user-icon" width="27" height="27">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
                 </svg>
               </a>
+
               <div class="lang-switcher  dropdown" id="lang-switcher">
                 <button class="dropdown-toggle  icon-link  icon-link--mob-menu" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Переключатель языка">
                   <svg class="globe-icon" width="27" height="27">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"/>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"></use>
                   </svg>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="lang-switcher">
@@ -151,12 +395,19 @@
                   </ul>
                 </div>
               </div>
+
               <button class="drawer__close" type="button" data-drawer-close aria-label="Закрыть моб. меню"></button>
+
             </div>
+
           </div>
+
         </div>
+
         <div class="drawer__content">
+
           <nav class="mob-menu">
+
             <ul class="list-nostyled  mob-menu__list">
               <li class="mob-menu__item  active">
                 <div class="mob-menu__link-wrapper">
@@ -214,10 +465,14 @@
                 <a href="contacts.html" class="mob-menu__link">Контакти</a>
               </li>
             </ul>
+
           </nav>
+
           <div class="drawer__service">
+
             <div class="search-form  search-form--mob-menu">
               <p class="search-form__caption">Відстежити замовлення</p>
+
               <form id="search-form-mob" class="search-form__form" action="#" method="post">
                 <div class="search-form__input-wrapper">
                   <label class="field-text">
@@ -225,9 +480,10 @@
                       <input class="field-text__input" type="text" placeholder="Номер накладної">
                     </span>
                   </label>
-                  <input class="btn  btn--submit" type="submit" name="submitForm" value>
+                  <input class="btn  btn--submit" type="submit" name="submitForm" value="">
                 </div>
               </form>
+
               <div class="search-form__result-wrapper">
                 <table>
                   <tr>
@@ -239,14 +495,27 @@
                   </tr>
                 </table>
               </div>
+
               <div class="search-form__call">
                 <p>Виникли питання? Телефонуйте!</p>
                 <a href="tel:+0800303006" class="search-form__call-link">0800303006</a>
               </div>
+
             </div>
+
             <a href="#" class="btn  drawer__client-btn">Стати клієнтом</a>
+
           </div>
+
         </div>
       </div>
     </section>
-  </div>  <script src="js/script.min.js"></script></body></html>
+
+
+  </div>
+
+  <script src="js/script.min.js"></script>
+
+
+</body>
+</html>

@@ -239,11 +239,16 @@ a {
   }
 
   @media (min-width: $screen-lg) {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media (min-width: $screen-xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: 1440px) {
     padding-left: 48px;
     padding-right: 48px;
   }
@@ -259,8 +264,8 @@ a {
   &--full {
 
     @media (min-width: $screen-xl) {
-      padding-left: 48px;
-      padding-right: 48px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
     @media (min-width: $screen-xxl) {
@@ -340,6 +345,11 @@ a {
   &--article {
     margin-bottom: 16px;
   }
+}
+
+.publishedon {
+  font-size: 16px;
+  color: $text-muted;
 }
 
 /* &__element {

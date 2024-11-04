@@ -1,0 +1,23 @@
+<!--DEV
+@ @include('blocks/news-card-block/news-card-block.html')
+-->
+
+<section class="container  news-card-block">
+  <h2 class="news-card-block__title">Новини</h2>
+
+  <div class="row  news-card-block__row">
+
+    <div class="news-card-block__col">
+      @@include('../../blocks/news-card-xl/news-card-xl.html')
+    </div>
+
+    <div class="news-card-block__col">
+      @@include('../../blocks/news-card/news-card.html', {
+        "title": "Новий сучасний склад в с. Синяк, Київська область",
+        "img": "news-big",
+        "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих…"
+      })
+    </div>
+
+  </div>
+</section>

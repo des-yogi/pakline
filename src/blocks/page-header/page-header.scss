@@ -13,111 +13,120 @@
     position: fixed;
     top: 0;
     width: 100%;
+  }
 
-    &--new-bg {
-      background-color: $white;
-      border-bottom-color: transparent;
-      box-shadow: 0 8px 12px rgba($black, 0.35);
+  &--visible,
+  &.sticky--new-bg {
+    background-color: $white;
+    border-bottom-color: transparent;
 
-      .logo {
+    .logo {
+
+      svg {
+
+        #icon {
+          fill: $main-color;
+        }
+
+        #text {
+          fill: $title-color;
+        }
+      }
+
+      &:hover,
+      &:focus {
 
         svg {
 
-          #icon {
+          #text {
             fill: $main-color;
           }
-
-          #text {
-            fill: $title-color;
-          }
-        }
-
-        &:hover,
-        &:focus {
-
-          svg {
-
-            #text {
-              fill: $main-color;
-            }
-          }
         }
       }
+    }
 
-      .icon-link {
-        color: $text-color;
+    .icon-link {
+      color: $text-color;
 
-        &:hover,
-        &:focus {
-          color: $link-color--hover;
-        }
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+
+    .dropdown-toggle--menu {
+      color: $text-color;
+
+      &::after {
+        background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
       }
 
-      .dropdown-toggle--menu {
-        color: $text-color;
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
 
         &::after {
-          background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
-        }
-
-        &:hover,
-        &:focus {
-          color: $link-color--hover;
-
-          &::after {
-            background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover);
-          }
+          background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover);
         }
       }
+    }
 
-      .topbar-nav .metismenu {
+    .topbar-nav .metismenu {
 
-        li.active {
-
-          a {
-            color: $link-color--hover;
-
-            &::before {
-              background-color: $link-color--hover;
-            }
-
-            &.has-arrow {
-
-              &::after {
-                background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
-              }
-            }
-          }
-        }
+      li.active {
 
         a {
-          color: $text-color;
+          color: $link-color--hover;
 
-          &:hover,
-          &:focus {
-            color: $link-color--hover;
-
-            &::before {
-              background-color: $link-color--hover;
-            }
+          &::before {
+            background-color: $link-color--hover;
           }
 
           &.has-arrow {
 
             &::after {
-              background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
-            }
-
-            &:hover,
-            &:focus {
-
-              &::after {
-                background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
-              }
+              background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
             }
           }
         }
       }
+
+      a {
+        color: $text-color;
+
+        &:hover,
+        &:focus {
+          color: $link-color--hover;
+
+          &::before {
+            background-color: $link-color--hover;
+          }
+        }
+
+        &.has-arrow {
+
+          &::after {
+            background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$text-color);
+          }
+
+          &:hover,
+          &:focus {
+
+            &::after {
+              background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$link-color--hover) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--visible {
+      border-bottom: 1px solid rgba($black, 0.15);
+
+    &.sticky.sticky--new-bg {
+      border-bottom: none;
+      box-shadow: 0 8px 12px rgba($black, 0.35);
     }
   }
 
@@ -141,6 +150,54 @@
         min-height: 568px;
       }
     }
+
+    &--article {
+      height: auto;
+      max-height: none;
+
+      .breadcrumbs {
+        margin: 24px 0;
+        color: $text-color;
+
+        @media (min-width: $screen-md) {
+          margin: 32px 0;
+        }
+
+        @media (min-width: $screen-lg) {
+          margin-bottom: 48px;
+        }
+      }
+
+      .breadcrumbs__link {
+        color: $text-muted;
+
+        &:hover,
+        &:focus {
+          color: $text-color;
+        }
+      }
+
+      .breadcrumbs__item {
+
+        &:first-child {
+
+          .breadcrumbs__link {
+            background-image: svg-load('../blocks/sprite-svg/svg/home.svg', fill=$text-muted);
+          }
+        }
+
+        &:last-child {
+
+          .breadcrumbs__link {
+            color: inherit;
+          }
+        }
+
+        &:not(:last-child)::after {
+          color: $text-muted;
+        }
+      }
+    }
   }
 
   &__inner {
@@ -161,10 +218,10 @@
 
     .btn {
       font-size: 13px;
-      margin-left: 24px;
+      margin-left: 16px; //24
 
       @media (min-width: $screen-xl) {
-        font-size: 15px;
+        font-size: 14px;
       }
 
       @media (min-width: $screen-xxl) {
@@ -189,11 +246,11 @@
     align-items: center;
 
     @media (min-width: $screen-lg) {
-      margin-left: 24px;
+      margin-left: 16px; //24
     }
 
     & > * {
-      margin-left: 24px;
+      margin-left: 16px; //24
 
       &:first-child {
         margin-left: 0;

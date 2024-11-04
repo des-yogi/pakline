@@ -2,8 +2,7 @@
 @ @include('blocks/breadcrumbs/breadcrumbs.html')
 -->
 
-<nav class="breadcrumbs">
-  <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
 
   <ol class="list-nostyled  breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
 
@@ -11,7 +10,7 @@
       itemtype="http://schema.org/ListItem">
       <a itemprop="item" href="#" class="breadcrumbs__link" title="Главная">
        <span class="visually-hidden" itemprop="name">Главная</span>
-       <meta itemprop="position" content="1" />
+       <meta itemprop="position" content="1">
       </a>
     </li>
 
@@ -19,7 +18,7 @@
       itemtype="http://schema.org/ListItem">
       <a itemprop="item" href="#" class="breadcrumbs__link">
         <span itemprop="name">Страница 1</span>
-        <meta itemprop="position" content="2" />
+        <meta itemprop="position" content="2">
       </a>
     </li>
 
@@ -27,7 +26,7 @@
       itemtype="http://schema.org/ListItem">
       <a itemprop="item" href="#" class="breadcrumbs__link">
         <span itemprop="name">Страница 2</span>
-        <meta itemprop="position" content="3" />
+        <meta itemprop="position" content="3">
       </a>
     </li>
 

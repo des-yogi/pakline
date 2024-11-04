@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новини</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper  page-header__wrapper--fixed">
+
+        <div class="b-lazy  hero  hero--fixed" data-src="img/half-hero-bg.jpg">
+          <!-- Если нет картинки на фоне надо добавить класс "hero--fixed--noimg" -->
+
+          <div class="container  container--full  hero__text  hero__text--fixed">
+
+            @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+            <div class="hero__text-inner">
+
+              <div class="hero__text-inner-left">
+
+                <h1 class="hero__title">Новини
+                  <!-- <span class="hero__slogan">Група компаній PAKLINE</span> -->
+                </h1>
+
+                <p class="hero__intro">Додатковий текст</p>
+              </div>
+
+              <div class="hero__text-inner-right">
+
+                <a href="#main-content" class="scroll-link  btn  btn__secondary  btn__secondary--next" title="Дальше" data-scroll-link></a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+
+      </div>
+
+      <main id="main-content">
+
+        <article class="container  news-article">
+          <h2 class="visually-hidden  news-article__title">Новини нашої компанії</h2>
+
+          <div class="row  news-article__row">
+            <div class="news-article__card-col  news-article__card-col--first">
+              @@include('blocks/news-card-xl/news-card-xl.html')
+            </div>
+            <div class="news-article__card-col">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Новий сучасний склад в с. Синяк, Київська область",
+                "img": "news-big",
+                "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих…"
+              })
+            </div>
+
+            <div class="news-article__card-col">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Новий сучасний склад в с. Синяк, Київська область",
+                "img": "news-big",
+                "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих…"
+              })
+            </div>
+
+            <div class="news-article__card-col">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Новий сучасний склад",
+                "img": "news-big",
+                "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів…"
+              })
+            </div>
+
+            <div class="news-article__card-col">
+              @@include('blocks/news-card/news-card.html', {
+                "title": "Новий сучасний склад в с. Синяк, Київська область",
+                "img": "news-big",
+                "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих…"
+              })
+            </div>
+          </div>
+
+          @@include('blocks/pagination/pagination.html')
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
