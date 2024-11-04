@@ -1,0 +1,33 @@
+.news-card-block {
+  margin-bottom: 64px;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xxl, 4, $grid-columns, 48px);
+
+    &:first-child {
+      @include col(lg, 8);
+      @include col(xxl, 8, $grid-columns, 48px);
+    }
+  }
+}

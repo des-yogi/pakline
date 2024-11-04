@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новина - Стаття</title>
+  @@include('_include/page_head.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper  page-header__wrapper--article">
+
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": "page-header--visible"
+        })
+
+        <div class="container">
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+        </div>
+      </div>
+
+      <main id="main-content">
+
+        <div class="container  article">
+
+          <div class="row  article__row">
+
+            <div class="article__content-col">
+              <article class="article__content">
+                <div class="embed-responsive  article__main-img">
+                  <picture>
+                    <source srcset="img/news-big.webp 500w,
+                                         img/news-big.webp 700w,
+                                         img/news-big.webp 850w,
+                                         img/news-big.webp 952w,
+                                         img/news-big.webp 1100w,
+                                         img/news-big.webp 1200w,
+                                         img/news-big.webp 1440w"
+                            sizes="(max-width: 1279px) 95vw,
+                                   (max-width: 1919px) 63vw,
+                                   952px"
+                            type="image/webp">
+
+                    <source srcset="img/news-big.jpg 500w,
+                                    img/news-big.jpg 700w,
+                                    img/news-big.jpg 850w,
+                                    img/news-big.jpg 952w,
+                                    img/news-big.jpg 1100w,
+                                    img/news-big.jpg 1200w,
+                                    img/news-big.jpg 1440w"
+                            sizes="(max-width: 1279px) 95vw,
+                                   (max-width: 1919px) 63vw,
+                                   952px"
+                    >
+
+                    <img src="img/news-big.jpg" alt="Alt text" width="1440" height="810" loading="lazy">
+                  </picture>
+                </div>
+                <h1 class="article__title">Новий сучасний склад в с. Синяк, Київська область</h1>
+                <div>
+                  <p>Новий складський комплекс з робочою площею 7000 м2 (Секція «А») значно покращить обслуговування в Дніпровському регіоні. Об’єкт має ємність до мільйона коробок, надаватиме сучасний сервіс з використанням автоматизованих станцій комплектації та зможе відвантажувати до 20 мільйонів одиниць продукції на рік. Робоча висота складу 10м, 9 доків + нульові ворота надають можливість пропускної спроможності складу до 50 вантажівок в день.</p>
+                  <p>Також, після введення в експлуатацію секції «А», готується відкриття новітньої секції «B» - 3600 м2 з 5500 п/м.</p>
+                  <p>Новий логістичний центр в передмісті Дніпра надасть нашим клієнтам більше можливостей у збільшенні продажів.</p>
+                </div>
+
+                <div class="article__publishedon">
+                  <time class="publishedon" datetime="2024-10-07">07.10.2024</time>
+                </div>
+
+                @@include('blocks/gallery/gallery.html')
+
+                @@include('blocks/social-share/social-share.html')
+
+                <div class="article__nav">
+                  <ul class="list-nostyled  article__nav-list">
+                    <li class="article__nav-item">
+                      <a href="#" class="btn  article__nav-link  article__nav-link--prev">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-arrow"></use></svg>
+                        <span>Попередня новина</span>
+                      </a>
+                    </li>
+                    <li class="article__nav-item">
+                      <a href="#" class="btn  article__nav-link  article__nav-link--next">
+                        <span>Наступна Новина</span>
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-arrow"></use></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </article>
+            </div>
+
+            <div class="article__aside-col">
+              @@include('blocks/article-aside/article-aside.html')
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/drawer/drawer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+  <script>
+    (function () {
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
+      });
+    })()
+  </script>
+
+</body>
+</html>

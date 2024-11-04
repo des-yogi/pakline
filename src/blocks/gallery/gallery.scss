@@ -1,0 +1,90 @@
+.gallery {
+  margin: 48px 0;
+
+  @media (min-width: $screen-lg) {
+    margin: 56px 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row(
+      $xs-grid-gutter:  30px,
+      $sm-grid-gutter:  30px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+    gap: 24px 0;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xxl, 4);
+  }
+
+  &__item {
+    display: block;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: transform $transition-time;
+    }
+
+    &--video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+
+        // &::before {
+        //   background-color: rgba($main-color, 1);
+        // }
+      }
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background $transition-time;
+      }
+
+      &::before {
+        width: 64px;
+        height: 64px;
+        z-index: 1;
+        background-color: rgba($main-color, 0.8);
+        border-radius: 50%;
+      }
+
+      &::after {
+        width: 32px;
+        height: 32px;
+        z-index: 2;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px;
+        background-image: svg-load('../blocks/gallery/bg-img/play.svg', fill=$white);
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.news-article {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+
+  /*@media (min-width: $screen-xxl) {
+    padding-top: 116px;
+    padding-bottom: 116px;
+  }*/
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+
+    @media (min-width: $screen-xxl) {
+      gap: 48px 0;
+    }
+  }
+
+  &__card-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xxl, 4, $grid-columns, 48px);
+
+    &--first {
+      @include col(md, 12);
+      @include col(lg, 8);
+      @include col(xxl, 8, $grid-columns, 48px);
+    }
+  }
+}

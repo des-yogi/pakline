@@ -42,7 +42,9 @@
           </div>
         </div>
 
-        @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
 
       </div>
 
@@ -397,6 +399,8 @@
           </ul>
 
         </section>
+
+        @@include('blocks/news-card-block/news-card-block.html')
 
       </main>
 

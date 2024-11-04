@@ -1,0 +1,50 @@
+<!--DEV
+@ @include('blocks/news-card/news-card.html', {
+  "title": "Новий сучасний склад в с. Синяк, Київська область",
+  "img": "news-big",
+  "text": "Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих…"
+})
+-->
+
+<article class="news-card">
+  <a href="#" class="embed-responsive  news-card__img" tabindex="-1">
+    <picture>
+      <source srcset="img/@@img.webp 450w,
+                      img/@@img.webp 500w,
+                      img/@@img.webp 600w,
+                      img/@@img.webp 700w,
+                      img/@@img.webp 800w,
+                      img/@@img.webp 900w"
+              sizes="(max-width: 767px) 95vw,
+                     (max-width: 1279px) 47vw,
+                     (max-width: 1440px) 32vw,
+                     450px"
+              type="image/webp">
+      <source srcset="img/@@img.jpg 450w,
+                      img/@@img.jpg 500w,
+                      img/@@img.jpg 600w,
+                      img/@@img.jpg 700w,
+                      img/@@img.jpg 800w,
+                      img/@@img.jpg 900w"
+              sizes="(max-width: 767px) 95vw,
+                     (max-width: 1279px) 47vw,
+                     (max-width: 1440px) 32vw,
+                     450px"
+      >
+      <img src="img/@@img.jpg" alt="Alt text" width="900" height="506" loading="lazy">
+    </picture>
+  </a>
+  <div class="news-card__text-wrapper">
+    <h3 class="h5  news-card__title">
+      <a href="#" tabindex="-1">@@title</a>
+    </h3>
+    <p class="news-card__text">@@text</p>
+    <p class="news-card__footer">
+      <time class="publishedon" datetime="2024-11-07">07.10.2024</time>
+      <a href="#" class="news-card__link-btn">
+        <span>Детальніше</span>
+        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-arrow"></use></svg>
+      </a>
+    </p>
+  </div>
+</article>

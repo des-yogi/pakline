@@ -1,0 +1,48 @@
+<!--DEV
+@ @include('blocks/news-card-xl/news-card-xl.html')
+-->
+
+<article class="news-card-xl">
+  <div class="embed-responsive  news-card-xl__img">
+    <picture>
+      <source srcset="img/news-big.webp 500w,
+                           img/news-big.webp 700w,
+                           img/news-big.webp 850w,
+                           img/news-big.webp 952w,
+                           img/news-big.webp 1100w,
+                           img/news-big.webp 1200w,
+                           img/news-big.webp 1440w"
+              sizes="(max-width: 1279px) 95vw,
+                     (max-width: 1919px) 63vw,
+                     952px"
+              type="image/webp">
+
+      <source srcset="img/news-big.jpg 500w,
+                      img/news-big.jpg 700w,
+                      img/news-big.jpg 850w,
+                      img/news-big.jpg 952w,
+                      img/news-big.jpg 1100w,
+                      img/news-big.jpg 1200w,
+                      img/news-big.jpg 1440w"
+              sizes="(max-width: 1279px) 95vw,
+                     (max-width: 1919px) 63vw,
+                     952px"
+      >
+
+      <img src="img/news-big.jpg" alt="Alt text" width="1440" height="810" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="news-card-xl__text-wrapper">
+    <h3 class="h5  news-card-xl__title">
+      <a href="#" tabindex="-1">Новий сучасний склад в с. Синяк, Київська область</a>
+    </h3>
+    <p class="news-card-xl__text">Представляємо вам наш новий сучасний склад площею 14 500 квадратних метрів, який розроблений відповідно до найвищих стандартів</p>
+    <p class="news-card-xl__footer">
+      <a href="#" class="btn  news-card-xl__link-btn">
+        <span>Детальніше</span>
+      </a>
+      <time class="publishedon" datetime="2024-11-07">07.10.2024</time>
+    </p>
+  </div>
+</article>

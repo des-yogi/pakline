@@ -52,7 +52,17 @@
     "career-block": [],
     "vacancy-block": [],
     "field-select": [],
-    "cookie-popup": []
+    "cookie-popup": [],
+    "news-card": [],
+    "news-card-xl": [],
+    "news-card-mini": [],
+    "news-card-block": [],
+    "gallery": [],
+    "gallery-card": [],
+    "social-share": [],
+    "news-article": [],
+    "article": [],
+    "article-aside": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

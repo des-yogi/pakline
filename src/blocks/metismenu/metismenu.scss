@@ -11,11 +11,11 @@ $link-color--hover:   #3e671e !default;
 
   @media (min-width: $menu-desktop-width) {
     display: block;
-    margin-left: 42px;
+    margin-left: 30px;
   }
 
   @media (min-width: $screen-xxl) {
-    margin-left: 64px;
+    margin-left: 60px;
   }
 }
 
@@ -107,7 +107,7 @@ $link-color--hover:   #3e671e !default;
 
   @media (min-width: $screen-xl) {
     //padding: 3px 18px 3px 18px;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
   }
 
