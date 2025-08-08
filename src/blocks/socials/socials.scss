@@ -53,5 +53,15 @@
         background-image: svg-load('../blocks/socials/bg-img/youtube.svg', fill=$main-color);
       }
     }
+
+    &--ln {
+      background-size: 32px 32px;
+      background-image: svg-load('../blocks/socials/bg-img/linkedin.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/socials/bg-img/linkedin.svg', fill=$main-color);
+      }
+    }
   }
 }
